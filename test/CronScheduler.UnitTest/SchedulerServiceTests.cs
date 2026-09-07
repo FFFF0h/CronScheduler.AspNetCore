@@ -1,5 +1,8 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
+
+using Cronos;
 
 using CronScheduler.Extensions.Internal;
 using CronScheduler.Extensions.Scheduler;
@@ -118,5 +121,45 @@ public class SchedulerServiceTests(ITestOutputHelper output)
         configuration.Reload();
 
         output.WriteLine(instance.Jobs.ToArray()[0].Value.Schedule.ToString());
+    }
+
+    [Fact]
+    public void Add_Job_With_Deterministic_Jitter_Successfully()
+    {
+        var services = new ServiceCollection();
+        services.AddOptions();
+        services.AddLogging();
+        services.AddSingleton<SchedulerRegistration>();
+
+        using var serviceProvider = services.BuildServiceProvider();
+        var registration = serviceProvider.GetRequiredService<SchedulerRegistration>();
+        var logger = serviceProvider.GetRequiredService<ILogger<TestJob>>();
+        var options = new SchedulerOptions
+        {
+            CronSchedule = "H * * * * *",
+            CronJitterSeed = 12345
+        };
+
+        var added = registration.AddOrUpdate(new TestJob(logger), options);
+
+        Assert.True(added);
+        Assert.Single(registration.Jobs);
+        Assert.DoesNotContain("H", registration.Jobs.Values.Single().Schedule.ToString());
+    }
+
+    [Fact]
+    public void Get_Previous_Occurrence_Successfully()
+    {
+        using var loggerFactory = LoggerFactory.Create(builder => builder.AddDebug());
+        var schedule = CronExpression.Parse("* * * * *");
+        var wrapper = new SchedulerTaskWrapper(
+            schedule,
+            new TestJob(loggerFactory.CreateLogger<TestJob>()),
+            new DateTimeOffset(2026, 1, 1, 12, 1, 0, TimeSpan.Zero),
+            TimeZoneInfo.Utc);
+
+        var previous = wrapper.GetPreviousOccurrence(new DateTimeOffset(2026, 1, 1, 12, 0, 30, TimeSpan.Zero));
+
+        Assert.Equal(new DateTimeOffset(2026, 1, 1, 12, 0, 0, TimeSpan.Zero), previous);
     }
 }

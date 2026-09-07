@@ -33,3 +33,9 @@
 
 ## Build Tool Decisions
 - **CronScheduler.sln**: `dotnet build` (all projects are SDK-style and target modern .NET/.NET Standard without Visual Studio-only build features)
+
+## User Preferences
+
+### Technical Preferences
+- Upgrade Cronos specifically from 0.8.4 to 0.13.0 and adopt relevant new Cronos capabilities rather than making a version-only change.
+- Update all affected documentation, with particular attention to the root `README.md`.
