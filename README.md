@@ -24,7 +24,7 @@ But that's not all! We've also introduced **IStartupJob**, allowing for async in
 * Lightweight and easy-to-use library
 * Simplified scheduling with cron syntax
 * Operates within the .NET Generic Host (`IHost`)
-* Async initialization support for critical processes with IStartupJob
+* Async initialization support for critical processes with `IStartupJob`
 * Deterministic schedule jitter to distribute load across jobs and instances
 * Previous-occurrence lookup for schedule inspection and diagnostics
 
@@ -44,13 +44,13 @@ If you like or are using this project to learn or start your solution, please gi
 - Install package for `AspNetCore` hosting .NET CLI
 
 ```bash
-    dotnet add package CronScheduler.AspNetCore
+dotnet add package CronScheduler.AspNetCore --version 3.3.0
 ```
 
-- Install package for `IHost` hosting .NET CLI
+- For Worker Services and other Generic Host applications:
 
 ```bash
-    dotnet add package CronScheduler.Extensions
+dotnet add package CronScheduler.Extensions --version 3.3.0
 ```
 
 ## Cron schedules
@@ -109,56 +109,41 @@ The calculation uses the job's configured time zone and does not change schedule
 
 ## Demo Applications
 
-- [CronSchedulerWorker](./src/CronSchedulerWorker/) - this example demonstrates how to use `CronScheduler` with new Microsoft .NET Core Workers Template
-- [CronSchedulerApp](./src/CronSchedulerApp) - this example demonstrates how to use `CronScheduler` with AspNetCore applications.
+- [CronSchedulerWorker](./src/CronSchedulerWorker/) demonstrates `CronScheduler` in a .NET Worker Service.
+- [CronSchedulerApp](./src/CronSchedulerApp/) demonstrates `CronScheduler` in an ASP.NET Core Razor Pages application.
 
-There are two ways that options and jobs can be registered within the Scheduler Jobs.
+Jobs can be registered by type or with a factory.
 
-1. The basic and most effective way to register is via `IConfiguration`
-
-This job registration is assuming that the name of the job and options name are the same.
+1. Register a job by type. By convention, the job name and its configuration section name are the type name.
 
 ```csharp
-    services.AddScheduler(ctx =>
-    {
-        ctx.AddJob<TestJob>();
-    });
+builder.Services.AddScheduler(scheduler =>
+{
+    scheduler.AddJob<TestJob>();
+});
 ```
 
-2. The complex factory registration of the same cron job with different options
+2. Use factories and explicit names to register the same job type with different options.
 
 ```csharp
-        services.AddScheduler(ctx =>
+builder.Services.AddScheduler(scheduler =>
+{
+    const string jobName1 = "TestJob1";
+
+    scheduler.AddJob(
+        sp =>
         {
-            var jobName1 = "TestJob1";
-
-            ctx.AddJob(
-                sp =>
-                {
-                    var options = sp.GetRequiredService<IOptionsMonitor<SchedulerOptions>>().Get(jobName1);
-                    return new TestJobDup(options, mockLoggerTestJob.Object);
-                },
-                options =>
-                {
-                    options.CronSchedule = "*/5 * * * * *";
-                    options.RunImmediately = true;
-                },
-                jobName: jobName1);
-
-            var jobName2 = "TestJob2";
-
-            ctx.AddJob(
-                sp =>
-                {
-                    var options = sp.GetRequiredService<IOptionsMonitor<SchedulerOptions>>().Get(jobName2);
-                    return new TestJobDup(options, mockLoggerTestJob.Object);
-                }, options =>
-                {
-                    options.CronSchedule = "*/5 * * * * *";
-                    options.RunImmediately = true;
-                },
-                jobName: jobName2);
-        });
+            var options = sp.GetRequiredService<IOptionsMonitor<SchedulerOptions>>().Get(jobName1);
+            var logger = sp.GetRequiredService<ILogger<TestJobDup>>();
+            return new TestJobDup(options, logger);
+        },
+        options =>
+        {
+            options.CronSchedule = "*/5 * * * * *";
+            options.RunImmediately = true;
+        },
+        jobName: jobName1);
+});
 ```
 
 ## Sample code for Singleton Schedule Job and its dependencies
@@ -266,7 +251,7 @@ await app.RunAsync();
 ```
 
 
-## `IStartupJobs` to assist with async jobs initialization before the application starts
+## `IStartupJob` for asynchronous initialization
 
 Startup jobs run against the modern `IHost` abstraction. A common use case is ensuring a database is created and migrated before the application begins serving requests.
 This library makes it possible by simply doing the following:
@@ -286,36 +271,36 @@ var app = builder.Build();
 await app.RunStartupJobsAsync();
 await app.RunAsync();
 ```
+
 ## Background Queues
 
-In some instances of the application the need for queuing of the tasks is required. In order to enable this add the following in `Startup.cs`.
+Use the background task queue when work must be queued for asynchronous execution. Register it in `Program.cs`:
 
 ```csharp
-    services.AddBackgroundQueuedService();
+builder.Services.AddBackgroundQueuedService();
 ```
 
-Then add sample async task to be executed by the Queued Hosted Service.
+Inject `IBackgroundTaskQueue` and enqueue asynchronous work for the hosted service:
 
 ```csharp
+public sealed class MyService
+{
+    private readonly IBackgroundTaskQueue _taskQueue;
 
-    public class MyService
+    public MyService(IBackgroundTaskQueue taskQueue)
     {
-        private readonly IBackgroundTaskQueue _taskQueue;
-
-        public MyService(IBackgroundTaskQueue taskQueue)
-        {
-            _taskQueue = taskQueue;
-        }
-
-        public void RunTask()
-        {
-            _taskQueue.QueueBackgroundWorkItem(async (token)=>
-            {
-                // run some task
-                await Task.Delay(TimeSpan.FromSeconds(10), token);
-            }});
-        }
+        _taskQueue = taskQueue;
     }
+
+    public void RunTask()
+    {
+        _taskQueue.QueueBackgroundWorkItem(async cancellationToken =>
+        {
+            // Run queued work.
+            await Task.Delay(TimeSpan.FromSeconds(10), cancellationToken);
+        });
+    }
+}
 ```
 
 ## License
