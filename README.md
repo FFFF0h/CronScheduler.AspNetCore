@@ -93,7 +93,7 @@ Cronos 0.13.0 supports the `H` character to deterministically distribute executi
 }
 ```
 
-The seed also adds jitter to supported macros. For example, `@hourly` with a seed runs once per hour at deterministic minute and second offsets. Using `H` without `CronJitterSeed` is invalid and Cronos throws `CronFormatException` during registration.
+The seed also adds jitter to supported macros. For example, `@hourly` with a seed runs once per hour at deterministic minute and second offsets. Using `H` without `CronJitterSeed` is invalid and Cronos throws `MissingSeedException` during registration.
 
 ### Previous occurrences
 
