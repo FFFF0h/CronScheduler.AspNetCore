@@ -2,7 +2,7 @@
 Change Log
 ===============================================================================
 
-Version 3.3.0
+Version 3.3.0 (09/07/2026)
 
 - Added .NET 10 support while retaining .NET 8 and .NET Standard 2.0 compatibility for shared libraries.
 - Upgraded Cronos from 0.8.x to 0.13.0.

@@ -44,13 +44,13 @@ If you like or are using this project to learn or start your solution, please gi
 - Install package for `AspNetCore` hosting .NET CLI
 
 ```bash
-dotnet add package CronScheduler.AspNetCore --version 3.3.0
+    dotnet add package CronScheduler.AspNetCore
 ```
 
-- For Worker Services and other Generic Host applications:
+- Install package for `IHost` hosting .NET CLI
 
 ```bash
-dotnet add package CronScheduler.Extensions --version 3.3.0
+    dotnet add package CronScheduler.Extensions
 ```
 
 ## Cron schedules
@@ -109,41 +109,56 @@ The calculation uses the job's configured time zone and does not change schedule
 
 ## Demo Applications
 
-- [CronSchedulerWorker](./src/CronSchedulerWorker/) demonstrates `CronScheduler` in a .NET Worker Service.
-- [CronSchedulerApp](./src/CronSchedulerApp/) demonstrates `CronScheduler` in an ASP.NET Core Razor Pages application.
+- [CronSchedulerWorker](./src/CronSchedulerWorker/) - this example demonstrates how to use `CronScheduler` with new Microsoft .NET Core Workers Template
+- [CronSchedulerApp](./src/CronSchedulerApp) - this example demonstrates how to use `CronScheduler` with AspNetCore applications.
 
-Jobs can be registered by type or with a factory.
+There are two ways that options and jobs can be registered within the Scheduler Jobs.
 
-1. Register a job by type. By convention, the job name and its configuration section name are the type name.
+1. The basic and most effective way to register is via `IConfiguration`
+
+This job registration is assuming that the name of the job and options name are the same.
 
 ```csharp
-builder.Services.AddScheduler(scheduler =>
-{
-    scheduler.AddJob<TestJob>();
-});
+    services.AddScheduler(ctx =>
+    {
+        ctx.AddJob<TestJob>();
+    });
 ```
 
-2. Use factories and explicit names to register the same job type with different options.
+2. The complex factory registration of the same cron job with different options
 
 ```csharp
-builder.Services.AddScheduler(scheduler =>
-{
-    const string jobName1 = "TestJob1";
+        services.AddScheduler(ctx =>
+        {
+            var jobName1 = "TestJob1";
 
-    scheduler.AddJob(
-        sp =>
-        {
-            var options = sp.GetRequiredService<IOptionsMonitor<SchedulerOptions>>().Get(jobName1);
-            var logger = sp.GetRequiredService<ILogger<TestJobDup>>();
-            return new TestJobDup(options, logger);
-        },
-        options =>
-        {
-            options.CronSchedule = "*/5 * * * * *";
-            options.RunImmediately = true;
-        },
-        jobName: jobName1);
-});
+            ctx.AddJob(
+                sp =>
+                {
+                    var options = sp.GetRequiredService<IOptionsMonitor<SchedulerOptions>>().Get(jobName1);
+                    return new TestJobDup(options, mockLoggerTestJob.Object);
+                },
+                options =>
+                {
+                    options.CronSchedule = "*/5 * * * * *";
+                    options.RunImmediately = true;
+                },
+                jobName: jobName1);
+
+            var jobName2 = "TestJob2";
+
+            ctx.AddJob(
+                sp =>
+                {
+                    var options = sp.GetRequiredService<IOptionsMonitor<SchedulerOptions>>().Get(jobName2);
+                    return new TestJobDup(options, mockLoggerTestJob.Object);
+                }, options =>
+                {
+                    options.CronSchedule = "*/5 * * * * *";
+                    options.RunImmediately = true;
+                },
+                jobName: jobName2);
+        });
 ```
 
 ## Sample code for Singleton Schedule Job and its dependencies
@@ -251,7 +266,7 @@ await app.RunAsync();
 ```
 
 
-## `IStartupJob` for asynchronous initialization
+## `IStartupJobs` to assist with async jobs initialization before the application starts
 
 Startup jobs run against the modern `IHost` abstraction. A common use case is ensuring a database is created and migrated before the application begins serving requests.
 This library makes it possible by simply doing the following:
@@ -271,36 +286,36 @@ var app = builder.Build();
 await app.RunStartupJobsAsync();
 await app.RunAsync();
 ```
-
 ## Background Queues
 
-Use the background task queue when work must be queued for asynchronous execution. Register it in `Program.cs`:
+In some instances of the application the need for queuing of the tasks is required. In order to enable this add the following in `Startup.cs`.
 
 ```csharp
-builder.Services.AddBackgroundQueuedService();
+    services.AddBackgroundQueuedService();
 ```
 
-Inject `IBackgroundTaskQueue` and enqueue asynchronous work for the hosted service:
+Then add sample async task to be executed by the Queued Hosted Service.
 
 ```csharp
-public sealed class MyService
-{
-    private readonly IBackgroundTaskQueue _taskQueue;
 
-    public MyService(IBackgroundTaskQueue taskQueue)
+    public class MyService
     {
-        _taskQueue = taskQueue;
-    }
+        private readonly IBackgroundTaskQueue _taskQueue;
 
-    public void RunTask()
-    {
-        _taskQueue.QueueBackgroundWorkItem(async cancellationToken =>
+        public MyService(IBackgroundTaskQueue taskQueue)
         {
-            // Run queued work.
-            await Task.Delay(TimeSpan.FromSeconds(10), cancellationToken);
-        });
+            _taskQueue = taskQueue;
+        }
+
+        public void RunTask()
+        {
+            _taskQueue.QueueBackgroundWorkItem(async (token)=>
+            {
+                // run some task
+                await Task.Delay(TimeSpan.FromSeconds(10), token);
+            }});
+        }
     }
-}
 ```
 
 ## License
