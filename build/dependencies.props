@@ -16,7 +16,6 @@
 		<PackageReference Update="Microsoft.Extensions.Logging.Abstractions" Version="$(ExtensionsVersion)" />
 		<PackageReference Update="Microsoft.Extensions.DependencyInjection" Version="$(ExtensionsVersion)" />
 		<PackageReference Update="Microsoft.AspNetCore.Mvc.NewtonsoftJson" Version="$(ExtensionsVersion)" />
-		<PackageReference Update="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="[1.*, )" />
 	</ItemGroup>
 
 	<ItemGroup Label="Websiste">
