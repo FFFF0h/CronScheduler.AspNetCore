@@ -1,8 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 
-using Bet.Extensions.Testing.Logging;
-
 using CronScheduler.Extensions.Internal;
 using CronScheduler.Extensions.Scheduler;
 
@@ -12,7 +10,6 @@ using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 
 using Xunit;
-using Xunit.Abstractions;
 
 namespace CronScheduler.UnitTest;
 
@@ -48,7 +45,6 @@ public class SchedulerServiceTests(ITestOutputHelper output)
         {
             builder.AddConsole();
             builder.AddDebug();
-            builder.AddXunit(output, LogLevel.Debug);
         });
 
         services.AddSingleton<SchedulerRegistration>();
@@ -57,11 +53,10 @@ public class SchedulerServiceTests(ITestOutputHelper output)
 
         var instance = sp.GetService<SchedulerRegistration>();
 
-        using var logFactory = TestLoggerBuilder.Create(builder =>
+        using var logFactory = LoggerFactory.Create(builder =>
         {
             builder.AddConsole();
             builder.AddDebug();
-            builder.AddXunit(output, LogLevel.Debug);
         });
 
         var job = new TestJob(logFactory.CreateLogger<TestJob>());
@@ -98,7 +93,6 @@ public class SchedulerServiceTests(ITestOutputHelper output)
         {
             builder.AddConsole();
             builder.AddDebug();
-            builder.AddXunit(output, LogLevel.Debug);
         });
 
         service.AddSingleton<SchedulerRegistration>();
@@ -107,11 +101,10 @@ public class SchedulerServiceTests(ITestOutputHelper output)
 
         var instance = sp.GetService<SchedulerRegistration>();
 
-        using var logFactory = TestLoggerBuilder.Create(builder =>
+        using var logFactory = LoggerFactory.Create(builder =>
         {
             builder.AddConsole();
             builder.AddDebug();
-            builder.AddXunit(output, LogLevel.Debug);
         });
 
         var job = new TestJob(logFactory.CreateLogger<TestJob>());

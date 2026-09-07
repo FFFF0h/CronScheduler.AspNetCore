@@ -1,7 +1,7 @@
 <Project>
 
 	<PropertyGroup>
-		<AspNetCoreVersion>[8.*, )</AspNetCoreVersion>
+		<AspNetCoreVersion>10.0.11</AspNetCoreVersion>
 		<ExtensionsVersion>[8.*, )</ExtensionsVersion>
 		<ExtensionsVersion Condition="'$(TargetFramework)' == 'net10.0'">10.0.11</ExtensionsVersion>
 		<EFCommonVersion>$(AspNetCoreVersion)</EFCommonVersion>
@@ -39,16 +39,15 @@
 	</ItemGroup>
 
 	<ItemGroup Label="Unit Tests">
-		<PackageReference Update="Microsoft.NET.Test.Sdk" Version="17.*" />
+		<PackageReference Update="Microsoft.NET.Test.Sdk" Version="18.9.0" />
 		<PackageReference Update="Microsoft.AspNetCore.TestHost" Version="$(AspNetCoreVersion)" />
 		<PackageReference Update="Moq" Version="4.*" />
-		<PackageReference Update="xunit" Version="2.*" />
-		<PackageReference Update="xunit.runner.visualstudio" Version="2.*"  PrivateAssets="All" />
+		<PackageReference Update="xunit.v3" Version="4.0.0" />
+		<PackageReference Update="xunit.runner.visualstudio" Version="4.0.0" PrivateAssets="All" />
 	</ItemGroup>
 
 	<ItemGroup Label="Bet">
 		<PackageReference Update="Bet.Extensions.Options" Version="$(BetCommon)" />
-		<PackageReference Update="Bet.Extensions.Testing" Version="$(BetCommon)" />
 	</ItemGroup>
 
 	<ItemGroup Label="SourceLink">
