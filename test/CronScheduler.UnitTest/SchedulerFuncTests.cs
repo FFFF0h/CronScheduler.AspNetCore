@@ -384,7 +384,7 @@ public class SchedulerFuncTests
             .UseDefaultServiceProvider(options => options.ValidateScopes = validateScopes)
             .Build();
 
-        host.Start();
+        host.StartAsync(TestContext.Current.CancellationToken).GetAwaiter().GetResult();
         return host;
     }
 
