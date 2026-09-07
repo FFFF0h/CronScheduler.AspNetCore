@@ -1,0 +1,2294 @@
+{
+  "settings": {
+    "components": {
+      "code": true,
+      "binaries": false
+    },
+    "targetId": "net10.0",
+    "targetDisplayName": ".NETCoreApp,Version=v10.0"
+  },
+  "analysisStartTime": "2026-09-07T14:28:03.6555838Z",
+  "analysisEndTime": "2026-09-07T14:28:04.4287392Z",
+  "privacyModeHelpUrl": "https://go.microsoft.com/fwlink/?linkid=2270980",
+  "stats": {
+    "summary": {
+      "projects": 5,
+      "issues": 7,
+      "incidents": 75,
+      "effort": 75
+    },
+    "charts": {
+      "severity": {
+        "Mandatory": 9,
+        "Optional": 1,
+        "Potential": 65,
+        "Information": 0
+      },
+      "category": {
+        "NuGet": 20,
+        "Project": 5,
+        "Api": 50
+      }
+    }
+  },
+  "projects": [
+    {
+      "path": "src\\CronScheduler.AspNetCore\\CronScheduler.AspNetCore.csproj",
+      "startingProject": true,
+      "issues": 3,
+      "storyPoints": 3,
+      "properties": {
+        "appName": "CronScheduler.AspNetCore",
+        "projectKind": "ClassLibrary",
+        "frameworks": [
+          "netstandard2.0",
+          "net8.0"
+        ],
+        "languages": [
+          "C#"
+        ],
+        "tools": [
+          "MSBuild"
+        ],
+        "isSdkStyle": true,
+        "numberOfFiles": 1,
+        "numberOfCodeFiles": 1,
+        "linesTotal": 24,
+        "linesOfCode": 24,
+        "totalApiScanned": 13,
+        "minLinesOfCodeToChange": 1,
+        "maxLinesOfCodeToChange": 1
+      },
+      "ruleInstances": [
+        {
+          "incidentId": "57192103-79d0-4874-9553-2a53ddbcbbcc",
+          "ruleId": "NuGet.0003",
+          "projectPath": "src\\CronScheduler.AspNetCore\\CronScheduler.AspNetCore.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "NETStandard.Library, 2.0.3\n\nRecommendation:\n\nPackage functionality included with new framework reference",
+              "protected": "NETStandard.Library, 2.0.3\n\nRecommendation:\n\nPackage functionality included with new framework reference"
+            },
+            "kind": "File",
+            "path": "src\\CronScheduler.AspNetCore\\CronScheduler.AspNetCore.csproj",
+            "snippet": "NETStandard.Library, 2.0.3\n\nRecommendation:\n\nPackage functionality included with new framework reference",
+            "protectedSnippet": "NETStandard.Library, 2.0.3\n\nRecommendation:\n\nPackage functionality included with new framework reference",
+            "label": "NETStandard.Library 2.0.3",
+            "properties": {
+              "PackageId": "NETStandard.Library",
+              "PackageVersion": "2.0.3",
+              "PackageNewVersion": null,
+              "PackageReplacements": null
+            }
+          }
+        },
+        {
+          "incidentId": "3c0686bd-3e91-4da4-a505-21d36df253eb",
+          "ruleId": "Project.0002",
+          "projectPath": "src\\CronScheduler.AspNetCore\\CronScheduler.AspNetCore.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Current target framework: netstandard2.0;net8.0\nRecommended target framework: netstandard2.0;net8.0;net10.0",
+              "protected": "Current target framework: netstandard2.0;net8.0\nRecommended target framework: netstandard2.0;net8.0;net10.0"
+            },
+            "kind": "File",
+            "path": "src\\CronScheduler.AspNetCore\\CronScheduler.AspNetCore.csproj",
+            "snippet": "Current target framework: netstandard2.0;net8.0\nRecommended target framework: netstandard2.0;net8.0;net10.0",
+            "protectedSnippet": "Current target framework: netstandard2.0;net8.0\nRecommended target framework: netstandard2.0;net8.0;net10.0",
+            "properties": {
+              "CurrentTargetFramework": "netstandard2.0;net8.0",
+              "RecommendedTargetFramework": "netstandard2.0;net8.0;net10.0"
+            }
+          }
+        },
+        {
+          "incidentId": "d5f1bb35-79a3-4404-82c2-15e62e8ed7f7",
+          "ruleId": "Api.0002",
+          "description": "WebHostBuilder, IWebHost, and WebHost are obsolete ",
+          "projectPath": "src\\CronScheduler.AspNetCore\\CronScheduler.AspNetCore.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "public static async Task RunStartupJobsAsync(this IWebHost host, CancellationToken cancellationToken = default)",
+              "protected": "T:Microsoft.AspNetCore.Hosting.IWebHost"
+            },
+            "kind": "File",
+            "path": "src\\CronScheduler.AspNetCore\\DependencyInjection\\StartupJobWebHostExtensions.cs",
+            "snippet": "public static async Task RunStartupJobsAsync(this IWebHost host, CancellationToken cancellationToken = default)",
+            "protectedSnippet": "T:Microsoft.AspNetCore.Hosting.IWebHost",
+            "label": "T:Microsoft.AspNetCore.Hosting.IWebHost",
+            "properties": {
+              "CharCount": "839"
+            },
+            "links": [
+              {
+                "title": "API documentation",
+                "url": "https://github.com/dotnet/docs/blob/main/docs/core/compatibility/aspnet-core/10/webhostbuilder-deprecated.md",
+                "isCustom": false
+              }
+            ],
+            "line": 17,
+            "column": 4
+          }
+        }
+      ],
+      "features": []
+    },
+    {
+      "path": "src\\CronScheduler.Extensions\\CronScheduler.Extensions.csproj",
+      "startingProject": true,
+      "issues": 4,
+      "storyPoints": 8,
+      "properties": {
+        "appName": "CronScheduler.Extensions",
+        "projectKind": "ClassLibrary",
+        "frameworks": [
+          "netstandard2.0",
+          "net8.0"
+        ],
+        "languages": [
+          "C#"
+        ],
+        "tools": [
+          "MSBuild"
+        ],
+        "isSdkStyle": true,
+        "numberOfFiles": 20,
+        "numberOfCodeFiles": 20,
+        "linesTotal": 1209,
+        "linesOfCode": 1209,
+        "totalApiScanned": 784,
+        "minLinesOfCodeToChange": 2,
+        "maxLinesOfCodeToChange": 2
+      },
+      "ruleInstances": [
+        {
+          "incidentId": "33ddcf20-6ff4-4dc2-ba81-d2d3c42b3977",
+          "ruleId": "NuGet.0002",
+          "projectPath": "src\\CronScheduler.Extensions\\CronScheduler.Extensions.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Microsoft.Extensions.DependencyInjection, 8.0.1\n\nRecommendation:\n\nRemove Microsoft.Extensions.DependencyInjection, and replace with new package Microsoft.Extensions.DependencyInjection 10.0.11",
+              "protected": "Microsoft.Extensions.DependencyInjection, 8.0.1\n\nRecommendation:\n\nRemove Microsoft.Extensions.DependencyInjection, and replace with new package Microsoft.Extensions.DependencyInjection 10.0.11"
+            },
+            "kind": "File",
+            "path": "src\\CronScheduler.Extensions\\CronScheduler.Extensions.csproj",
+            "snippet": "Microsoft.Extensions.DependencyInjection, 8.0.1\n\nRecommendation:\n\nRemove Microsoft.Extensions.DependencyInjection, and replace with new package Microsoft.Extensions.DependencyInjection 10.0.11",
+            "protectedSnippet": "Microsoft.Extensions.DependencyInjection, 8.0.1\n\nRecommendation:\n\nRemove Microsoft.Extensions.DependencyInjection, and replace with new package Microsoft.Extensions.DependencyInjection 10.0.11",
+            "label": "Microsoft.Extensions.DependencyInjection 8.0.1",
+            "properties": {
+              "PackageId": "Microsoft.Extensions.DependencyInjection",
+              "PackageVersion": "8.0.1",
+              "PackageNewVersion": "10.0.11",
+              "PackageReplacements": null
+            }
+          }
+        },
+        {
+          "incidentId": "fc7a67c0-d12d-4d7f-8dff-e4527aa9c6fb",
+          "ruleId": "NuGet.0002",
+          "projectPath": "src\\CronScheduler.Extensions\\CronScheduler.Extensions.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Microsoft.Extensions.Hosting.Abstractions, 8.0.1\n\nRecommendation:\n\nRemove Microsoft.Extensions.Hosting.Abstractions, and replace with new package Microsoft.Extensions.Hosting.Abstractions 10.0.11",
+              "protected": "Microsoft.Extensions.Hosting.Abstractions, 8.0.1\n\nRecommendation:\n\nRemove Microsoft.Extensions.Hosting.Abstractions, and replace with new package Microsoft.Extensions.Hosting.Abstractions 10.0.11"
+            },
+            "kind": "File",
+            "path": "src\\CronScheduler.Extensions\\CronScheduler.Extensions.csproj",
+            "snippet": "Microsoft.Extensions.Hosting.Abstractions, 8.0.1\n\nRecommendation:\n\nRemove Microsoft.Extensions.Hosting.Abstractions, and replace with new package Microsoft.Extensions.Hosting.Abstractions 10.0.11",
+            "protectedSnippet": "Microsoft.Extensions.Hosting.Abstractions, 8.0.1\n\nRecommendation:\n\nRemove Microsoft.Extensions.Hosting.Abstractions, and replace with new package Microsoft.Extensions.Hosting.Abstractions 10.0.11",
+            "label": "Microsoft.Extensions.Hosting.Abstractions 8.0.1",
+            "properties": {
+              "PackageId": "Microsoft.Extensions.Hosting.Abstractions",
+              "PackageVersion": "8.0.1",
+              "PackageNewVersion": "10.0.11",
+              "PackageReplacements": null
+            }
+          }
+        },
+        {
+          "incidentId": "c2f5bb9a-ddfc-4361-b23c-c0c86309ee4d",
+          "ruleId": "NuGet.0002",
+          "projectPath": "src\\CronScheduler.Extensions\\CronScheduler.Extensions.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Microsoft.Extensions.Logging.Abstractions, 8.0.3\n\nRecommendation:\n\nRemove Microsoft.Extensions.Logging.Abstractions, and replace with new package Microsoft.Extensions.Logging.Abstractions 10.0.11",
+              "protected": "Microsoft.Extensions.Logging.Abstractions, 8.0.3\n\nRecommendation:\n\nRemove Microsoft.Extensions.Logging.Abstractions, and replace with new package Microsoft.Extensions.Logging.Abstractions 10.0.11"
+            },
+            "kind": "File",
+            "path": "src\\CronScheduler.Extensions\\CronScheduler.Extensions.csproj",
+            "snippet": "Microsoft.Extensions.Logging.Abstractions, 8.0.3\n\nRecommendation:\n\nRemove Microsoft.Extensions.Logging.Abstractions, and replace with new package Microsoft.Extensions.Logging.Abstractions 10.0.11",
+            "protectedSnippet": "Microsoft.Extensions.Logging.Abstractions, 8.0.3\n\nRecommendation:\n\nRemove Microsoft.Extensions.Logging.Abstractions, and replace with new package Microsoft.Extensions.Logging.Abstractions 10.0.11",
+            "label": "Microsoft.Extensions.Logging.Abstractions 8.0.3",
+            "properties": {
+              "PackageId": "Microsoft.Extensions.Logging.Abstractions",
+              "PackageVersion": "8.0.3",
+              "PackageNewVersion": "10.0.11",
+              "PackageReplacements": null
+            }
+          }
+        },
+        {
+          "incidentId": "b4474c5e-418e-49bb-96f1-127bad292a13",
+          "ruleId": "NuGet.0002",
+          "projectPath": "src\\CronScheduler.Extensions\\CronScheduler.Extensions.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Microsoft.Extensions.Options.ConfigurationExtensions, 8.0.0\n\nRecommendation:\n\nRemove Microsoft.Extensions.Options.ConfigurationExtensions, and replace with new package Microsoft.Extensions.Options.ConfigurationExtensions 10.0.11",
+              "protected": "Microsoft.Extensions.Options.ConfigurationExtensions, 8.0.0\n\nRecommendation:\n\nRemove Microsoft.Extensions.Options.ConfigurationExtensions, and replace with new package Microsoft.Extensions.Options.ConfigurationExtensions 10.0.11"
+            },
+            "kind": "File",
+            "path": "src\\CronScheduler.Extensions\\CronScheduler.Extensions.csproj",
+            "snippet": "Microsoft.Extensions.Options.ConfigurationExtensions, 8.0.0\n\nRecommendation:\n\nRemove Microsoft.Extensions.Options.ConfigurationExtensions, and replace with new package Microsoft.Extensions.Options.ConfigurationExtensions 10.0.11",
+            "protectedSnippet": "Microsoft.Extensions.Options.ConfigurationExtensions, 8.0.0\n\nRecommendation:\n\nRemove Microsoft.Extensions.Options.ConfigurationExtensions, and replace with new package Microsoft.Extensions.Options.ConfigurationExtensions 10.0.11",
+            "label": "Microsoft.Extensions.Options.ConfigurationExtensions 8.0.0",
+            "properties": {
+              "PackageId": "Microsoft.Extensions.Options.ConfigurationExtensions",
+              "PackageVersion": "8.0.0",
+              "PackageNewVersion": "10.0.11",
+              "PackageReplacements": null
+            }
+          }
+        },
+        {
+          "incidentId": "86f01e43-8fb3-4103-90f3-f989e326bc48",
+          "ruleId": "NuGet.0003",
+          "projectPath": "src\\CronScheduler.Extensions\\CronScheduler.Extensions.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "NETStandard.Library, 2.0.3\n\nRecommendation:\n\nPackage functionality included with new framework reference",
+              "protected": "NETStandard.Library, 2.0.3\n\nRecommendation:\n\nPackage functionality included with new framework reference"
+            },
+            "kind": "File",
+            "path": "src\\CronScheduler.Extensions\\CronScheduler.Extensions.csproj",
+            "snippet": "NETStandard.Library, 2.0.3\n\nRecommendation:\n\nPackage functionality included with new framework reference",
+            "protectedSnippet": "NETStandard.Library, 2.0.3\n\nRecommendation:\n\nPackage functionality included with new framework reference",
+            "label": "NETStandard.Library 2.0.3",
+            "properties": {
+              "PackageId": "NETStandard.Library",
+              "PackageVersion": "2.0.3",
+              "PackageNewVersion": null,
+              "PackageReplacements": null
+            }
+          }
+        },
+        {
+          "incidentId": "603b7b28-2019-4563-94f4-bca27030915d",
+          "ruleId": "Project.0002",
+          "projectPath": "src\\CronScheduler.Extensions\\CronScheduler.Extensions.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Current target framework: netstandard2.0;net8.0\nRecommended target framework: netstandard2.0;net8.0;net10.0",
+              "protected": "Current target framework: netstandard2.0;net8.0\nRecommended target framework: netstandard2.0;net8.0;net10.0"
+            },
+            "kind": "File",
+            "path": "src\\CronScheduler.Extensions\\CronScheduler.Extensions.csproj",
+            "snippet": "Current target framework: netstandard2.0;net8.0\nRecommended target framework: netstandard2.0;net8.0;net10.0",
+            "protectedSnippet": "Current target framework: netstandard2.0;net8.0\nRecommended target framework: netstandard2.0;net8.0;net10.0",
+            "properties": {
+              "CurrentTargetFramework": "netstandard2.0;net8.0",
+              "RecommendedTargetFramework": "netstandard2.0;net8.0;net10.0"
+            }
+          }
+        },
+        {
+          "incidentId": "74e15b0d-0f2d-4d98-9fab-f009c2f2473c",
+          "ruleId": "Api.0002",
+          "description": "Breaking change: New TimeSpan.From*() overloads that take integers ",
+          "projectPath": "src\\CronScheduler.Extensions\\CronScheduler.Extensions.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "applicationOnStopTimeoutWait = applicationOnStopTimeoutWait == default ? TimeSpan.FromSeconds(10) : applicationOnStopTimeoutWait;",
+              "protected": "M:System.TimeSpan.FromSeconds(System.Double)"
+            },
+            "kind": "File",
+            "path": "src\\CronScheduler.Extensions\\DependencyInjection\\BackgroundQueuedServiceCollectionExtensions.cs",
+            "snippet": "applicationOnStopTimeoutWait = applicationOnStopTimeoutWait == default ? TimeSpan.FromSeconds(10) : applicationOnStopTimeoutWait;",
+            "protectedSnippet": "M:System.TimeSpan.FromSeconds(System.Double)",
+            "label": "M:System.TimeSpan.FromSeconds(System.Double)",
+            "properties": {
+              "CharCount": "1906"
+            },
+            "links": [
+              {
+                "title": "API documentation",
+                "url": "https://github.com/dotnet/docs/blob/main/docs/core/compatibility/core-libraries/9.0/timespan-from-overloads.md",
+                "isCustom": false
+              }
+            ],
+            "line": 23,
+            "column": 8
+          }
+        },
+        {
+          "incidentId": "71609fc6-80ac-4f65-b228-3d0c65fc8f92",
+          "ruleId": "Api.0002",
+          "description": "Breaking change: New TimeSpan.From*() overloads that take integers ",
+          "projectPath": "src\\CronScheduler.Extensions\\CronScheduler.Extensions.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "await Task.Delay(TimeSpan.FromSeconds(1), stoppingToken);",
+              "protected": "M:System.TimeSpan.FromSeconds(System.Double)"
+            },
+            "kind": "File",
+            "path": "src\\CronScheduler.Extensions\\Internal\\SchedulerHostedService.cs",
+            "snippet": "await Task.Delay(TimeSpan.FromSeconds(1), stoppingToken);",
+            "protectedSnippet": "M:System.TimeSpan.FromSeconds(System.Double)",
+            "label": "M:System.TimeSpan.FromSeconds(System.Double)",
+            "properties": {
+              "CharCount": "2662"
+            },
+            "links": [
+              {
+                "title": "API documentation",
+                "url": "https://github.com/dotnet/docs/blob/main/docs/core/compatibility/core-libraries/9.0/timespan-from-overloads.md",
+                "isCustom": false
+              }
+            ],
+            "line": 36,
+            "column": 12
+          }
+        }
+      ],
+      "features": []
+    },
+    {
+      "path": "test\\CronScheduler.UnitTest\\CronScheduler.UnitTest.csproj",
+      "startingProject": true,
+      "issues": 5,
+      "storyPoints": 31,
+      "properties": {
+        "appName": "CronScheduler.UnitTest",
+        "projectKind": "DotNetCoreApp",
+        "frameworks": [
+          "net8.0"
+        ],
+        "languages": [
+          "C#"
+        ],
+        "tools": [
+          "MSBuild"
+        ],
+        "isSdkStyle": true,
+        "numberOfFiles": 15,
+        "numberOfCodeFiles": 12,
+        "linesTotal": 2691,
+        "linesOfCode": 879,
+        "totalApiScanned": 1080,
+        "minLinesOfCodeToChange": 28,
+        "maxLinesOfCodeToChange": 28
+      },
+      "ruleInstances": [
+        {
+          "incidentId": "1e159bb1-564b-490c-9a4f-1d4c2947aa52",
+          "ruleId": "NuGet.0002",
+          "projectPath": "test\\CronScheduler.UnitTest\\CronScheduler.UnitTest.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Microsoft.AspNetCore.TestHost, 8.0.30\n\nRecommendation:\n\nRemove Microsoft.AspNetCore.TestHost, and replace with new package Microsoft.AspNetCore.TestHost 10.0.11",
+              "protected": "Microsoft.AspNetCore.TestHost, 8.0.30\n\nRecommendation:\n\nRemove Microsoft.AspNetCore.TestHost, and replace with new package Microsoft.AspNetCore.TestHost 10.0.11"
+            },
+            "kind": "File",
+            "path": "test\\CronScheduler.UnitTest\\CronScheduler.UnitTest.csproj",
+            "snippet": "Microsoft.AspNetCore.TestHost, 8.0.30\n\nRecommendation:\n\nRemove Microsoft.AspNetCore.TestHost, and replace with new package Microsoft.AspNetCore.TestHost 10.0.11",
+            "protectedSnippet": "Microsoft.AspNetCore.TestHost, 8.0.30\n\nRecommendation:\n\nRemove Microsoft.AspNetCore.TestHost, and replace with new package Microsoft.AspNetCore.TestHost 10.0.11",
+            "label": "Microsoft.AspNetCore.TestHost 8.0.30",
+            "properties": {
+              "PackageId": "Microsoft.AspNetCore.TestHost",
+              "PackageVersion": "8.0.30",
+              "PackageNewVersion": "10.0.11",
+              "PackageReplacements": null
+            }
+          }
+        },
+        {
+          "incidentId": "5b39aae9-c040-41c9-bcce-0d98064fdaf3",
+          "ruleId": "NuGet.0005",
+          "projectPath": "test\\CronScheduler.UnitTest\\CronScheduler.UnitTest.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "xunit, 2.9.3\n\nRecommendation:\n\nThis package will only be updated for security issues. All future feature work has moved onto v3.\n\nGuide for migrating from xUnit.net v2 to v3: https://xunit.net/docs/getting-started/v3/migration\nRemove xunit, and replace with new package xunit, 2.9.3",
+              "protected": "xunit, 2.9.3\n\nRecommendation:\n\nThis package will only be updated for security issues. All future feature work has moved onto v3.\n\nGuide for migrating from xUnit.net v2 to v3: https://xunit.net/docs/getting-started/v3/migration\nRemove xunit, and replace with new package xunit, 2.9.3"
+            },
+            "kind": "File",
+            "path": "test\\CronScheduler.UnitTest\\CronScheduler.UnitTest.csproj",
+            "snippet": "xunit, 2.9.3\n\nRecommendation:\n\nThis package will only be updated for security issues. All future feature work has moved onto v3.\n\nGuide for migrating from xUnit.net v2 to v3: https://xunit.net/docs/getting-started/v3/migration\nRemove xunit, and replace with new package xunit, 2.9.3",
+            "protectedSnippet": "xunit, 2.9.3\n\nRecommendation:\n\nThis package will only be updated for security issues. All future feature work has moved onto v3.\n\nGuide for migrating from xUnit.net v2 to v3: https://xunit.net/docs/getting-started/v3/migration\nRemove xunit, and replace with new package xunit, 2.9.3",
+            "label": "xunit 2.9.3",
+            "properties": {
+              "PackageId": "xunit",
+              "PackageVersion": "2.9.3",
+              "PackageNewVersion": null,
+              "PackageReplacements": null
+            }
+          }
+        },
+        {
+          "incidentId": "3597d2c9-c9e9-4093-b87f-d30bc964e4f5",
+          "ruleId": "Project.0002",
+          "projectPath": "test\\CronScheduler.UnitTest\\CronScheduler.UnitTest.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Current target framework: net8.0\nRecommended target framework: net10.0",
+              "protected": "Current target framework: net8.0\nRecommended target framework: net10.0"
+            },
+            "kind": "File",
+            "path": "test\\CronScheduler.UnitTest\\CronScheduler.UnitTest.csproj",
+            "snippet": "Current target framework: net8.0\nRecommended target framework: net10.0",
+            "protectedSnippet": "Current target framework: net8.0\nRecommended target framework: net10.0",
+            "properties": {
+              "CurrentTargetFramework": "net8.0",
+              "RecommendedTargetFramework": "net10.0"
+            }
+          }
+        },
+        {
+          "incidentId": "889b3ed2-9b2d-4bab-a267-e7babd1b0013",
+          "ruleId": "Api.0002",
+          "description": "WebHostBuilder, IWebHost, and WebHost are obsolete ",
+          "projectPath": "test\\CronScheduler.UnitTest\\CronScheduler.UnitTest.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "private static IWebHost CreateHost(Action\u003CIServiceCollection\u003E configureServices, bool validateScopes = false)",
+              "protected": "T:Microsoft.AspNetCore.Hosting.IWebHost"
+            },
+            "kind": "File",
+            "path": "test\\CronScheduler.UnitTest\\StartupJobFuncTests.cs",
+            "snippet": "private static IWebHost CreateHost(Action\u003CIServiceCollection\u003E configureServices, bool validateScopes = false)",
+            "protectedSnippet": "T:Microsoft.AspNetCore.Hosting.IWebHost",
+            "label": "T:Microsoft.AspNetCore.Hosting.IWebHost",
+            "properties": {
+              "CharCount": "1682"
+            },
+            "links": [
+              {
+                "title": "API documentation",
+                "url": "https://github.com/dotnet/docs/blob/main/docs/core/compatibility/aspnet-core/10/webhostbuilder-deprecated.md",
+                "isCustom": false
+              }
+            ],
+            "line": 54,
+            "column": 4
+          }
+        },
+        {
+          "incidentId": "d134d13e-2f47-4f79-9685-727b461f044c",
+          "ruleId": "Api.0002",
+          "description": "WebHostBuilder, IWebHost, and WebHost are obsolete ",
+          "projectPath": "test\\CronScheduler.UnitTest\\CronScheduler.UnitTest.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "return new WebHostBuilder()\r\n                .UseStartup\u003CTestStartup\u003E()\r\n                .ConfigureServices(configureServices)\r\n                .UseDefaultServiceProvider(options =\u003E options.ValidateScopes = validateScopes)\r\n                .Build();",
+              "protected": "T:Microsoft.AspNetCore.Hosting.WebHostBuilder"
+            },
+            "kind": "File",
+            "path": "test\\CronScheduler.UnitTest\\StartupJobFuncTests.cs",
+            "snippet": "return new WebHostBuilder()\r\n                .UseStartup\u003CTestStartup\u003E()\r\n                .ConfigureServices(configureServices)\r\n                .UseDefaultServiceProvider(options =\u003E options.ValidateScopes = validateScopes)\r\n                .Build();",
+            "protectedSnippet": "T:Microsoft.AspNetCore.Hosting.WebHostBuilder",
+            "label": "T:Microsoft.AspNetCore.Hosting.WebHostBuilder",
+            "properties": {
+              "CharCount": "1682"
+            },
+            "links": [
+              {
+                "title": "API documentation",
+                "url": "https://github.com/dotnet/docs/blob/main/docs/core/compatibility/aspnet-core/10/webhostbuilder-deprecated.md",
+                "isCustom": false
+              }
+            ],
+            "line": 56,
+            "column": 8
+          }
+        },
+        {
+          "incidentId": "270449de-36ff-46c5-af1e-b252bc7e89c8",
+          "ruleId": "Api.0002",
+          "description": "WebHostBuilder, IWebHost, and WebHost are obsolete ",
+          "projectPath": "test\\CronScheduler.UnitTest\\CronScheduler.UnitTest.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "return new WebHostBuilder()\r\n                .UseStartup\u003CTestStartup\u003E()\r\n                .ConfigureServices(configureServices)\r\n                .UseDefaultServiceProvider(options =\u003E options.ValidateScopes = validateScopes)\r\n                .Build();",
+              "protected": "T:Microsoft.AspNetCore.Hosting.IWebHost"
+            },
+            "kind": "File",
+            "path": "test\\CronScheduler.UnitTest\\StartupJobFuncTests.cs",
+            "snippet": "return new WebHostBuilder()\r\n                .UseStartup\u003CTestStartup\u003E()\r\n                .ConfigureServices(configureServices)\r\n                .UseDefaultServiceProvider(options =\u003E options.ValidateScopes = validateScopes)\r\n                .Build();",
+            "protectedSnippet": "T:Microsoft.AspNetCore.Hosting.IWebHost",
+            "label": "T:Microsoft.AspNetCore.Hosting.IWebHost",
+            "properties": {
+              "CharCount": "1682"
+            },
+            "links": [
+              {
+                "title": "API documentation",
+                "url": "https://github.com/dotnet/docs/blob/main/docs/core/compatibility/aspnet-core/10/webhostbuilder-deprecated.md",
+                "isCustom": false
+              }
+            ],
+            "line": 56,
+            "column": 8
+          }
+        },
+        {
+          "incidentId": "f87d5d88-9c66-4eab-8b1a-5f3071062cc9",
+          "ruleId": "Api.0002",
+          "description": "WebHostBuilder, IWebHost, and WebHost are obsolete ",
+          "projectPath": "test\\CronScheduler.UnitTest\\CronScheduler.UnitTest.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "var host = CreateHost(services =\u003E services.AddStartupJobInitializer(CompletedTask));",
+              "protected": "T:Microsoft.AspNetCore.Hosting.IWebHost"
+            },
+            "kind": "File",
+            "path": "test\\CronScheduler.UnitTest\\StartupJobFuncTests.cs",
+            "snippet": "var host = CreateHost(services =\u003E services.AddStartupJobInitializer(CompletedTask));",
+            "protectedSnippet": "T:Microsoft.AspNetCore.Hosting.IWebHost",
+            "label": "T:Microsoft.AspNetCore.Hosting.IWebHost",
+            "properties": {
+              "CharCount": "1682"
+            },
+            "links": [
+              {
+                "title": "API documentation",
+                "url": "https://github.com/dotnet/docs/blob/main/docs/core/compatibility/aspnet-core/10/webhostbuilder-deprecated.md",
+                "isCustom": false
+              }
+            ],
+            "line": 47,
+            "column": 8
+          }
+        },
+        {
+          "incidentId": "c89c4491-a0e0-402e-a6e0-cd8a8aa899e5",
+          "ruleId": "Api.0002",
+          "description": "WebHostBuilder, IWebHost, and WebHost are obsolete ",
+          "projectPath": "test\\CronScheduler.UnitTest\\CronScheduler.UnitTest.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "var host = builder.Build();",
+              "protected": "T:Microsoft.AspNetCore.Hosting.IWebHost"
+            },
+            "kind": "File",
+            "path": "test\\CronScheduler.UnitTest\\StartupJobFuncTests.cs",
+            "snippet": "var host = builder.Build();",
+            "protectedSnippet": "T:Microsoft.AspNetCore.Hosting.IWebHost",
+            "label": "T:Microsoft.AspNetCore.Hosting.IWebHost",
+            "properties": {
+              "CharCount": "1682"
+            },
+            "links": [
+              {
+                "title": "API documentation",
+                "url": "https://github.com/dotnet/docs/blob/main/docs/core/compatibility/aspnet-core/10/webhostbuilder-deprecated.md",
+                "isCustom": false
+              }
+            ],
+            "line": 28,
+            "column": 8
+          }
+        },
+        {
+          "incidentId": "3b27a9f0-d00e-432a-b05a-9a78c528c6e2",
+          "ruleId": "Api.0002",
+          "description": "WebHostBuilder, IWebHost, and WebHost are obsolete ",
+          "projectPath": "test\\CronScheduler.UnitTest\\CronScheduler.UnitTest.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "var builder = WebHost.CreateDefaultBuilder()\r\n           .UseStartup\u003CTestStartup\u003E()\r\n           .ConfigureServices(services =\u003E\r\n           {\r\n               services.AddLogging();\r\n               services.AddStartupJob\u003CTestStartupJob\u003E();\r\n           })\r\n           .UseDefaultServiceProvider(options =\u003E options.ValidateScopes = false);",
+              "protected": "T:Microsoft.AspNetCore.WebHost"
+            },
+            "kind": "File",
+            "path": "test\\CronScheduler.UnitTest\\StartupJobFuncTests.cs",
+            "snippet": "var builder = WebHost.CreateDefaultBuilder()\r\n           .UseStartup\u003CTestStartup\u003E()\r\n           .ConfigureServices(services =\u003E\r\n           {\r\n               services.AddLogging();\r\n               services.AddStartupJob\u003CTestStartupJob\u003E();\r\n           })\r\n           .UseDefaultServiceProvider(options =\u003E options.ValidateScopes = false);",
+            "protectedSnippet": "T:Microsoft.AspNetCore.WebHost",
+            "label": "T:Microsoft.AspNetCore.WebHost",
+            "properties": {
+              "CharCount": "1682"
+            },
+            "links": [
+              {
+                "title": "API documentation",
+                "url": "https://github.com/dotnet/docs/blob/main/docs/core/compatibility/aspnet-core/10/webhostbuilder-deprecated.md",
+                "isCustom": false
+              }
+            ],
+            "line": 19,
+            "column": 8
+          }
+        },
+        {
+          "incidentId": "bb1294e3-8957-4c60-b7c5-0791ca5f6b30",
+          "ruleId": "Api.0002",
+          "description": "WebHostBuilder, IWebHost, and WebHost are obsolete ",
+          "projectPath": "test\\CronScheduler.UnitTest\\CronScheduler.UnitTest.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "return new WebHostBuilder()\r\n            .UseContentRoot(Directory.GetCurrentDirectory())\r\n            .ConfigureAppConfiguration((hostingContext, config) =\u003E\r\n            {\r\n                var env = hostingContext.HostingEnvironment;\r\n\r\n                config.AddJsonFile(\u0022appsettings.json\u0022, optional: true, reloadOnChange: true)\r\n                      .AddJsonFile($\u0022appsettings.{env.EnvironmentName}.json\u0022, optional: true, reloadOnChange: true);\r\n\r\n                if (env.IsDevelopment())\r\n                {\r\n                    var appAssembly = Assembly.Load(new AssemblyName(env.ApplicationName));\r\n                    if (appAssembly != null)\r\n                    {\r\n                        config.AddUserSecrets(appAssembly, optional: true);\r\n                    }\r\n                }\r\n\r\n                config.AddEnvironmentVariables();\r\n            })\r\n            .UseStartup\u003CTestStartup\u003E()\r\n            .ConfigureTestServices(services =\u003E\r\n            {\r\n                configServices(services);\r\n                services.AddLogging(x =\u003E x.AddXunit(output));\r\n            })\r\n            .UseDefaultServiceProvider(options =\u003E options.ValidateScopes = validateScopes);",
+              "protected": "T:Microsoft.AspNetCore.Hosting.WebHostBuilder"
+            },
+            "kind": "File",
+            "path": "test\\CronScheduler.UnitTest\\SchedulerFuncTests.cs",
+            "snippet": "return new WebHostBuilder()\r\n            .UseContentRoot(Directory.GetCurrentDirectory())\r\n            .ConfigureAppConfiguration((hostingContext, config) =\u003E\r\n            {\r\n                var env = hostingContext.HostingEnvironment;\r\n\r\n                config.AddJsonFile(\u0022appsettings.json\u0022, optional: true, reloadOnChange: true)\r\n                      .AddJsonFile($\u0022appsettings.{env.EnvironmentName}.json\u0022, optional: true, reloadOnChange: true);\r\n\r\n                if (env.IsDevelopment())\r\n                {\r\n                    var appAssembly = Assembly.Load(new AssemblyName(env.ApplicationName));\r\n                    if (appAssembly != null)\r\n                    {\r\n                        config.AddUserSecrets(appAssembly, optional: true);\r\n                    }\r\n                }\r\n\r\n                config.AddEnvironmentVariables();\r\n            })\r\n            .UseStartup\u003CTestStartup\u003E()\r\n            .ConfigureTestServices(services =\u003E\r\n            {\r\n                configServices(services);\r\n                services.AddLogging(x =\u003E x.AddXunit(output));\r\n            })\r\n            .UseDefaultServiceProvider(options =\u003E options.ValidateScopes = validateScopes);",
+            "protectedSnippet": "T:Microsoft.AspNetCore.Hosting.WebHostBuilder",
+            "label": "T:Microsoft.AspNetCore.Hosting.WebHostBuilder",
+            "properties": {
+              "CharCount": "14047"
+            },
+            "links": [
+              {
+                "title": "API documentation",
+                "url": "https://github.com/dotnet/docs/blob/main/docs/core/compatibility/aspnet-core/10/webhostbuilder-deprecated.md",
+                "isCustom": false
+              }
+            ],
+            "line": 358,
+            "column": 8
+          }
+        },
+        {
+          "incidentId": "15070bad-cf36-40b1-a166-c7a8cfb1f591",
+          "ruleId": "Api.0003",
+          "description": "Breaking change - Streaming HTTP responses enabled by default in browser HTTP clients ",
+          "projectPath": "test\\CronScheduler.UnitTest\\CronScheduler.UnitTest.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Assert.Equal(\u0022healthy\u0022, await response.Content.ReadAsStringAsync());",
+              "protected": "T:System.Net.Http.HttpContent"
+            },
+            "kind": "File",
+            "path": "test\\CronScheduler.UnitTest\\SchedulerFuncTests.cs",
+            "snippet": "Assert.Equal(\u0022healthy\u0022, await response.Content.ReadAsStringAsync());",
+            "protectedSnippet": "T:System.Net.Http.HttpContent",
+            "label": "T:System.Net.Http.HttpContent",
+            "properties": {
+              "CharCount": "14047"
+            },
+            "links": [
+              {
+                "title": "API documentation",
+                "url": "https://github.com/dotnet/docs/blob/main/docs/core/compatibility/networking/10.0/default-http-streaming.md",
+                "isCustom": false
+              }
+            ],
+            "line": 342,
+            "column": 8
+          }
+        },
+        {
+          "incidentId": "c40c140c-024e-4fba-9e48-9c0af0f9950e",
+          "ruleId": "Api.0002",
+          "description": "Breaking change: New TimeSpan.From*() overloads that take integers ",
+          "projectPath": "test\\CronScheduler.UnitTest\\CronScheduler.UnitTest.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "await Task.Delay(TimeSpan.FromSeconds(3));",
+              "protected": "M:System.TimeSpan.FromSeconds(System.Double)"
+            },
+            "kind": "File",
+            "path": "test\\CronScheduler.UnitTest\\SchedulerFuncTests.cs",
+            "snippet": "await Task.Delay(TimeSpan.FromSeconds(3));",
+            "protectedSnippet": "M:System.TimeSpan.FromSeconds(System.Double)",
+            "label": "M:System.TimeSpan.FromSeconds(System.Double)",
+            "properties": {
+              "CharCount": "14047"
+            },
+            "links": [
+              {
+                "title": "API documentation",
+                "url": "https://github.com/dotnet/docs/blob/main/docs/core/compatibility/core-libraries/9.0/timespan-from-overloads.md",
+                "isCustom": false
+              }
+            ],
+            "line": 339,
+            "column": 8
+          }
+        },
+        {
+          "incidentId": "66b60449-104b-438e-a9f1-4a0a8ea2131d",
+          "ruleId": "Api.0003",
+          "description": "Breaking change - Streaming HTTP responses enabled by default in browser HTTP clients ",
+          "projectPath": "test\\CronScheduler.UnitTest\\CronScheduler.UnitTest.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Assert.Equal(\u0022healthy\u0022, await response.Content.ReadAsStringAsync());",
+              "protected": "T:System.Net.Http.HttpContent"
+            },
+            "kind": "File",
+            "path": "test\\CronScheduler.UnitTest\\SchedulerFuncTests.cs",
+            "snippet": "Assert.Equal(\u0022healthy\u0022, await response.Content.ReadAsStringAsync());",
+            "protectedSnippet": "T:System.Net.Http.HttpContent",
+            "label": "T:System.Net.Http.HttpContent",
+            "properties": {
+              "CharCount": "14047"
+            },
+            "links": [
+              {
+                "title": "API documentation",
+                "url": "https://github.com/dotnet/docs/blob/main/docs/core/compatibility/networking/10.0/default-http-streaming.md",
+                "isCustom": false
+              }
+            ],
+            "line": 307,
+            "column": 8
+          }
+        },
+        {
+          "incidentId": "16767734-3fdd-475e-8c8d-4b5d3df9f028",
+          "ruleId": "Api.0002",
+          "description": "Breaking change: New TimeSpan.From*() overloads that take integers ",
+          "projectPath": "test\\CronScheduler.UnitTest\\CronScheduler.UnitTest.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "await Task.Delay(TimeSpan.FromSeconds(6));",
+              "protected": "M:System.TimeSpan.FromSeconds(System.Double)"
+            },
+            "kind": "File",
+            "path": "test\\CronScheduler.UnitTest\\SchedulerFuncTests.cs",
+            "snippet": "await Task.Delay(TimeSpan.FromSeconds(6));",
+            "protectedSnippet": "M:System.TimeSpan.FromSeconds(System.Double)",
+            "label": "M:System.TimeSpan.FromSeconds(System.Double)",
+            "properties": {
+              "CharCount": "14047"
+            },
+            "links": [
+              {
+                "title": "API documentation",
+                "url": "https://github.com/dotnet/docs/blob/main/docs/core/compatibility/core-libraries/9.0/timespan-from-overloads.md",
+                "isCustom": false
+              }
+            ],
+            "line": 304,
+            "column": 8
+          }
+        },
+        {
+          "incidentId": "f314c951-a91b-4905-84ac-f7fed12e63be",
+          "ruleId": "Api.0003",
+          "description": "Breaking change - Streaming HTTP responses enabled by default in browser HTTP clients ",
+          "projectPath": "test\\CronScheduler.UnitTest\\CronScheduler.UnitTest.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Assert.Equal(\u0022healthy\u0022, await response.Content.ReadAsStringAsync());",
+              "protected": "T:System.Net.Http.HttpContent"
+            },
+            "kind": "File",
+            "path": "test\\CronScheduler.UnitTest\\SchedulerFuncTests.cs",
+            "snippet": "Assert.Equal(\u0022healthy\u0022, await response.Content.ReadAsStringAsync());",
+            "protectedSnippet": "T:System.Net.Http.HttpContent",
+            "label": "T:System.Net.Http.HttpContent",
+            "properties": {
+              "CharCount": "14047"
+            },
+            "links": [
+              {
+                "title": "API documentation",
+                "url": "https://github.com/dotnet/docs/blob/main/docs/core/compatibility/networking/10.0/default-http-streaming.md",
+                "isCustom": false
+              }
+            ],
+            "line": 257,
+            "column": 8
+          }
+        },
+        {
+          "incidentId": "d081baff-e74d-40b9-b32f-787fb556fd81",
+          "ruleId": "Api.0002",
+          "description": "Breaking change: New TimeSpan.From*() overloads that take integers ",
+          "projectPath": "test\\CronScheduler.UnitTest\\CronScheduler.UnitTest.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "await Task.Delay(TimeSpan.FromSeconds(6));",
+              "protected": "M:System.TimeSpan.FromSeconds(System.Double)"
+            },
+            "kind": "File",
+            "path": "test\\CronScheduler.UnitTest\\SchedulerFuncTests.cs",
+            "snippet": "await Task.Delay(TimeSpan.FromSeconds(6));",
+            "protectedSnippet": "M:System.TimeSpan.FromSeconds(System.Double)",
+            "label": "M:System.TimeSpan.FromSeconds(System.Double)",
+            "properties": {
+              "CharCount": "14047"
+            },
+            "links": [
+              {
+                "title": "API documentation",
+                "url": "https://github.com/dotnet/docs/blob/main/docs/core/compatibility/core-libraries/9.0/timespan-from-overloads.md",
+                "isCustom": false
+              }
+            ],
+            "line": 254,
+            "column": 8
+          }
+        },
+        {
+          "incidentId": "a3651096-acae-4ef9-aa19-a3190489959f",
+          "ruleId": "Api.0003",
+          "description": "Breaking change - Streaming HTTP responses enabled by default in browser HTTP clients ",
+          "projectPath": "test\\CronScheduler.UnitTest\\CronScheduler.UnitTest.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Assert.Equal(\u0022healthy\u0022, await response.Content.ReadAsStringAsync());",
+              "protected": "T:System.Net.Http.HttpContent"
+            },
+            "kind": "File",
+            "path": "test\\CronScheduler.UnitTest\\SchedulerFuncTests.cs",
+            "snippet": "Assert.Equal(\u0022healthy\u0022, await response.Content.ReadAsStringAsync());",
+            "protectedSnippet": "T:System.Net.Http.HttpContent",
+            "label": "T:System.Net.Http.HttpContent",
+            "properties": {
+              "CharCount": "14047"
+            },
+            "links": [
+              {
+                "title": "API documentation",
+                "url": "https://github.com/dotnet/docs/blob/main/docs/core/compatibility/networking/10.0/default-http-streaming.md",
+                "isCustom": false
+              }
+            ],
+            "line": 205,
+            "column": 8
+          }
+        },
+        {
+          "incidentId": "99b9abd1-6d4f-44dd-86a6-b1c90a1c18ce",
+          "ruleId": "Api.0002",
+          "description": "Breaking change: New TimeSpan.From*() overloads that take integers ",
+          "projectPath": "test\\CronScheduler.UnitTest\\CronScheduler.UnitTest.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "await Task.Delay(TimeSpan.FromSeconds(6));",
+              "protected": "M:System.TimeSpan.FromSeconds(System.Double)"
+            },
+            "kind": "File",
+            "path": "test\\CronScheduler.UnitTest\\SchedulerFuncTests.cs",
+            "snippet": "await Task.Delay(TimeSpan.FromSeconds(6));",
+            "protectedSnippet": "M:System.TimeSpan.FromSeconds(System.Double)",
+            "label": "M:System.TimeSpan.FromSeconds(System.Double)",
+            "properties": {
+              "CharCount": "14047"
+            },
+            "links": [
+              {
+                "title": "API documentation",
+                "url": "https://github.com/dotnet/docs/blob/main/docs/core/compatibility/core-libraries/9.0/timespan-from-overloads.md",
+                "isCustom": false
+              }
+            ],
+            "line": 202,
+            "column": 8
+          }
+        },
+        {
+          "incidentId": "2e89a1e5-d599-4f5d-a61a-f6ac9b8c9d78",
+          "ruleId": "Api.0003",
+          "description": "Breaking change - Streaming HTTP responses enabled by default in browser HTTP clients ",
+          "projectPath": "test\\CronScheduler.UnitTest\\CronScheduler.UnitTest.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Assert.Equal(\u0022healthy\u0022, await response.Content.ReadAsStringAsync());",
+              "protected": "T:System.Net.Http.HttpContent"
+            },
+            "kind": "File",
+            "path": "test\\CronScheduler.UnitTest\\SchedulerFuncTests.cs",
+            "snippet": "Assert.Equal(\u0022healthy\u0022, await response.Content.ReadAsStringAsync());",
+            "protectedSnippet": "T:System.Net.Http.HttpContent",
+            "label": "T:System.Net.Http.HttpContent",
+            "properties": {
+              "CharCount": "14047"
+            },
+            "links": [
+              {
+                "title": "API documentation",
+                "url": "https://github.com/dotnet/docs/blob/main/docs/core/compatibility/networking/10.0/default-http-streaming.md",
+                "isCustom": false
+              }
+            ],
+            "line": 163,
+            "column": 8
+          }
+        },
+        {
+          "incidentId": "da8906b4-bb23-4923-9416-b08c89bde42f",
+          "ruleId": "Api.0002",
+          "description": "Breaking change: New TimeSpan.From*() overloads that take integers ",
+          "projectPath": "test\\CronScheduler.UnitTest\\CronScheduler.UnitTest.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "await Task.Delay(TimeSpan.FromSeconds(6));",
+              "protected": "M:System.TimeSpan.FromSeconds(System.Double)"
+            },
+            "kind": "File",
+            "path": "test\\CronScheduler.UnitTest\\SchedulerFuncTests.cs",
+            "snippet": "await Task.Delay(TimeSpan.FromSeconds(6));",
+            "protectedSnippet": "M:System.TimeSpan.FromSeconds(System.Double)",
+            "label": "M:System.TimeSpan.FromSeconds(System.Double)",
+            "properties": {
+              "CharCount": "14047"
+            },
+            "links": [
+              {
+                "title": "API documentation",
+                "url": "https://github.com/dotnet/docs/blob/main/docs/core/compatibility/core-libraries/9.0/timespan-from-overloads.md",
+                "isCustom": false
+              }
+            ],
+            "line": 160,
+            "column": 8
+          }
+        },
+        {
+          "incidentId": "08ce2da1-39ec-49c1-ac41-5884f66ffc84",
+          "ruleId": "Api.0003",
+          "description": "Breaking change - Streaming HTTP responses enabled by default in browser HTTP clients ",
+          "projectPath": "test\\CronScheduler.UnitTest\\CronScheduler.UnitTest.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Assert.Equal(\u0022healthy\u0022, await response.Content.ReadAsStringAsync());",
+              "protected": "T:System.Net.Http.HttpContent"
+            },
+            "kind": "File",
+            "path": "test\\CronScheduler.UnitTest\\SchedulerFuncTests.cs",
+            "snippet": "Assert.Equal(\u0022healthy\u0022, await response.Content.ReadAsStringAsync());",
+            "protectedSnippet": "T:System.Net.Http.HttpContent",
+            "label": "T:System.Net.Http.HttpContent",
+            "properties": {
+              "CharCount": "14047"
+            },
+            "links": [
+              {
+                "title": "API documentation",
+                "url": "https://github.com/dotnet/docs/blob/main/docs/core/compatibility/networking/10.0/default-http-streaming.md",
+                "isCustom": false
+              }
+            ],
+            "line": 127,
+            "column": 8
+          }
+        },
+        {
+          "incidentId": "71de1962-d782-49da-80b9-00f2199f0589",
+          "ruleId": "Api.0002",
+          "description": "Breaking change: New TimeSpan.From*() overloads that take integers ",
+          "projectPath": "test\\CronScheduler.UnitTest\\CronScheduler.UnitTest.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "await Task.Delay(TimeSpan.FromSeconds(6));",
+              "protected": "M:System.TimeSpan.FromSeconds(System.Double)"
+            },
+            "kind": "File",
+            "path": "test\\CronScheduler.UnitTest\\SchedulerFuncTests.cs",
+            "snippet": "await Task.Delay(TimeSpan.FromSeconds(6));",
+            "protectedSnippet": "M:System.TimeSpan.FromSeconds(System.Double)",
+            "label": "M:System.TimeSpan.FromSeconds(System.Double)",
+            "properties": {
+              "CharCount": "14047"
+            },
+            "links": [
+              {
+                "title": "API documentation",
+                "url": "https://github.com/dotnet/docs/blob/main/docs/core/compatibility/core-libraries/9.0/timespan-from-overloads.md",
+                "isCustom": false
+              }
+            ],
+            "line": 124,
+            "column": 8
+          }
+        },
+        {
+          "incidentId": "916faf5d-17e6-4116-9ee9-069a23499290",
+          "ruleId": "Api.0003",
+          "description": "Breaking change - Streaming HTTP responses enabled by default in browser HTTP clients ",
+          "projectPath": "test\\CronScheduler.UnitTest\\CronScheduler.UnitTest.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Assert.Equal(\u0022healthy\u0022, await response.Content.ReadAsStringAsync());",
+              "protected": "T:System.Net.Http.HttpContent"
+            },
+            "kind": "File",
+            "path": "test\\CronScheduler.UnitTest\\SchedulerFuncTests.cs",
+            "snippet": "Assert.Equal(\u0022healthy\u0022, await response.Content.ReadAsStringAsync());",
+            "protectedSnippet": "T:System.Net.Http.HttpContent",
+            "label": "T:System.Net.Http.HttpContent",
+            "properties": {
+              "CharCount": "14047"
+            },
+            "links": [
+              {
+                "title": "API documentation",
+                "url": "https://github.com/dotnet/docs/blob/main/docs/core/compatibility/networking/10.0/default-http-streaming.md",
+                "isCustom": false
+              }
+            ],
+            "line": 66,
+            "column": 8
+          }
+        },
+        {
+          "incidentId": "6387e671-968f-469f-9cc3-9b17bd0ca439",
+          "ruleId": "Api.0002",
+          "description": "Breaking change: New TimeSpan.From*() overloads that take integers ",
+          "projectPath": "test\\CronScheduler.UnitTest\\CronScheduler.UnitTest.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "await Task.Delay(TimeSpan.FromSeconds(6));",
+              "protected": "M:System.TimeSpan.FromSeconds(System.Double)"
+            },
+            "kind": "File",
+            "path": "test\\CronScheduler.UnitTest\\SchedulerFuncTests.cs",
+            "snippet": "await Task.Delay(TimeSpan.FromSeconds(6));",
+            "protectedSnippet": "M:System.TimeSpan.FromSeconds(System.Double)",
+            "label": "M:System.TimeSpan.FromSeconds(System.Double)",
+            "properties": {
+              "CharCount": "14047"
+            },
+            "links": [
+              {
+                "title": "API documentation",
+                "url": "https://github.com/dotnet/docs/blob/main/docs/core/compatibility/core-libraries/9.0/timespan-from-overloads.md",
+                "isCustom": false
+              }
+            ],
+            "line": 63,
+            "column": 8
+          }
+        },
+        {
+          "incidentId": "a98889ce-c450-4afe-9fec-d71df15e742a",
+          "ruleId": "Api.0003",
+          "description": "Breaking change: Message no longer duplicated in Console log output ",
+          "projectPath": "test\\CronScheduler.UnitTest\\CronScheduler.UnitTest.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "builder.AddConsole();",
+              "protected": "M:Microsoft.Extensions.Logging.ConsoleLoggerExtensions.AddConsole(Microsoft.Extensions.Logging.ILoggingBuilder)"
+            },
+            "kind": "File",
+            "path": "test\\CronScheduler.UnitTest\\SchedulerFuncTests.cs",
+            "snippet": "builder.AddConsole();",
+            "protectedSnippet": "M:Microsoft.Extensions.Logging.ConsoleLoggerExtensions.AddConsole(Microsoft.Extensions.Logging.ILoggingBuilder)",
+            "label": "M:Microsoft.Extensions.Logging.ConsoleLoggerExtensions.AddConsole(Microsoft.Extensions.Logging.ILoggingBuilder)",
+            "properties": {
+              "CharCount": "14047"
+            },
+            "links": [
+              {
+                "title": "API documentation",
+                "url": "https://github.com/dotnet/docs/blob/main/docs/core/compatibility/extensions/10.0/console-json-logging-duplicate-messages.md",
+                "isCustom": false
+              }
+            ],
+            "line": 34,
+            "column": 12
+          }
+        },
+        {
+          "incidentId": "1bd3e3f8-cee8-4612-92a5-d167057e7a53",
+          "ruleId": "Api.0002",
+          "description": "Breaking change: New TimeSpan.From*() overloads that take integers ",
+          "projectPath": "test\\CronScheduler.UnitTest\\CronScheduler.UnitTest.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "await Task.Delay(TimeSpan.FromSeconds(15));",
+              "protected": "M:System.TimeSpan.FromSeconds(System.Double)"
+            },
+            "kind": "File",
+            "path": "test\\CronScheduler.UnitTest\\SchedulerRegistrationTests.cs",
+            "snippet": "await Task.Delay(TimeSpan.FromSeconds(15));",
+            "protectedSnippet": "M:System.TimeSpan.FromSeconds(System.Double)",
+            "label": "M:System.TimeSpan.FromSeconds(System.Double)",
+            "properties": {
+              "CharCount": "2302"
+            },
+            "links": [
+              {
+                "title": "API documentation",
+                "url": "https://github.com/dotnet/docs/blob/main/docs/core/compatibility/core-libraries/9.0/timespan-from-overloads.md",
+                "isCustom": false
+              }
+            ],
+            "line": 65,
+            "column": 8
+          }
+        },
+        {
+          "incidentId": "fd5655b1-667b-49ef-a6c9-d770c1632dd9",
+          "ruleId": "Api.0003",
+          "description": "Breaking change: Message no longer duplicated in Console log output ",
+          "projectPath": "test\\CronScheduler.UnitTest\\CronScheduler.UnitTest.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "builder.AddConsole();",
+              "protected": "M:Microsoft.Extensions.Logging.ConsoleLoggerExtensions.AddConsole(Microsoft.Extensions.Logging.ILoggingBuilder)"
+            },
+            "kind": "File",
+            "path": "test\\CronScheduler.UnitTest\\SchedulerServiceTests.cs",
+            "snippet": "builder.AddConsole();",
+            "protectedSnippet": "M:Microsoft.Extensions.Logging.ConsoleLoggerExtensions.AddConsole(Microsoft.Extensions.Logging.ILoggingBuilder)",
+            "label": "M:Microsoft.Extensions.Logging.ConsoleLoggerExtensions.AddConsole(Microsoft.Extensions.Logging.ILoggingBuilder)",
+            "properties": {
+              "CharCount": "4112"
+            },
+            "links": [
+              {
+                "title": "API documentation",
+                "url": "https://github.com/dotnet/docs/blob/main/docs/core/compatibility/extensions/10.0/console-json-logging-duplicate-messages.md",
+                "isCustom": false
+              }
+            ],
+            "line": 111,
+            "column": 12
+          }
+        },
+        {
+          "incidentId": "023388eb-1a47-444f-9c58-fd48ecdd7c9c",
+          "ruleId": "Api.0003",
+          "description": "Breaking change: Message no longer duplicated in Console log output ",
+          "projectPath": "test\\CronScheduler.UnitTest\\CronScheduler.UnitTest.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "builder.AddConsole();",
+              "protected": "M:Microsoft.Extensions.Logging.ConsoleLoggerExtensions.AddConsole(Microsoft.Extensions.Logging.ILoggingBuilder)"
+            },
+            "kind": "File",
+            "path": "test\\CronScheduler.UnitTest\\SchedulerServiceTests.cs",
+            "snippet": "builder.AddConsole();",
+            "protectedSnippet": "M:Microsoft.Extensions.Logging.ConsoleLoggerExtensions.AddConsole(Microsoft.Extensions.Logging.ILoggingBuilder)",
+            "label": "M:Microsoft.Extensions.Logging.ConsoleLoggerExtensions.AddConsole(Microsoft.Extensions.Logging.ILoggingBuilder)",
+            "properties": {
+              "CharCount": "4112"
+            },
+            "links": [
+              {
+                "title": "API documentation",
+                "url": "https://github.com/dotnet/docs/blob/main/docs/core/compatibility/extensions/10.0/console-json-logging-duplicate-messages.md",
+                "isCustom": false
+              }
+            ],
+            "line": 98,
+            "column": 12
+          }
+        },
+        {
+          "incidentId": "0be39156-acd7-4af3-aa83-17d3854fd41a",
+          "ruleId": "Api.0003",
+          "description": "Breaking change: Message no longer duplicated in Console log output ",
+          "projectPath": "test\\CronScheduler.UnitTest\\CronScheduler.UnitTest.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "builder.AddConsole();",
+              "protected": "M:Microsoft.Extensions.Logging.ConsoleLoggerExtensions.AddConsole(Microsoft.Extensions.Logging.ILoggingBuilder)"
+            },
+            "kind": "File",
+            "path": "test\\CronScheduler.UnitTest\\SchedulerServiceTests.cs",
+            "snippet": "builder.AddConsole();",
+            "protectedSnippet": "M:Microsoft.Extensions.Logging.ConsoleLoggerExtensions.AddConsole(Microsoft.Extensions.Logging.ILoggingBuilder)",
+            "label": "M:Microsoft.Extensions.Logging.ConsoleLoggerExtensions.AddConsole(Microsoft.Extensions.Logging.ILoggingBuilder)",
+            "properties": {
+              "CharCount": "4112"
+            },
+            "links": [
+              {
+                "title": "API documentation",
+                "url": "https://github.com/dotnet/docs/blob/main/docs/core/compatibility/extensions/10.0/console-json-logging-duplicate-messages.md",
+                "isCustom": false
+              }
+            ],
+            "line": 61,
+            "column": 12
+          }
+        },
+        {
+          "incidentId": "a7f1e99e-6c7e-4139-816f-4967237d00c6",
+          "ruleId": "Api.0003",
+          "description": "Breaking change: Message no longer duplicated in Console log output ",
+          "projectPath": "test\\CronScheduler.UnitTest\\CronScheduler.UnitTest.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "builder.AddConsole();",
+              "protected": "M:Microsoft.Extensions.Logging.ConsoleLoggerExtensions.AddConsole(Microsoft.Extensions.Logging.ILoggingBuilder)"
+            },
+            "kind": "File",
+            "path": "test\\CronScheduler.UnitTest\\SchedulerServiceTests.cs",
+            "snippet": "builder.AddConsole();",
+            "protectedSnippet": "M:Microsoft.Extensions.Logging.ConsoleLoggerExtensions.AddConsole(Microsoft.Extensions.Logging.ILoggingBuilder)",
+            "label": "M:Microsoft.Extensions.Logging.ConsoleLoggerExtensions.AddConsole(Microsoft.Extensions.Logging.ILoggingBuilder)",
+            "properties": {
+              "CharCount": "4112"
+            },
+            "links": [
+              {
+                "title": "API documentation",
+                "url": "https://github.com/dotnet/docs/blob/main/docs/core/compatibility/extensions/10.0/console-json-logging-duplicate-messages.md",
+                "isCustom": false
+              }
+            ],
+            "line": 48,
+            "column": 12
+          }
+        },
+        {
+          "incidentId": "839e840b-b9d6-4def-b188-87ac28fbbe9c",
+          "ruleId": "Api.0002",
+          "description": "Breaking change: New TimeSpan.From*() overloads that take integers ",
+          "projectPath": "test\\CronScheduler.UnitTest\\CronScheduler.UnitTest.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "await Task.Delay(TimeSpan.FromSeconds(10), cancellationToken);",
+              "protected": "M:System.TimeSpan.FromSeconds(System.Double)"
+            },
+            "kind": "File",
+            "path": "test\\CronScheduler.UnitTest\\TestStartupJob.cs",
+            "snippet": "await Task.Delay(TimeSpan.FromSeconds(10), cancellationToken);",
+            "protectedSnippet": "M:System.TimeSpan.FromSeconds(System.Double)",
+            "label": "M:System.TimeSpan.FromSeconds(System.Double)",
+            "properties": {
+              "CharCount": "419"
+            },
+            "links": [
+              {
+                "title": "API documentation",
+                "url": "https://github.com/dotnet/docs/blob/main/docs/core/compatibility/core-libraries/9.0/timespan-from-overloads.md",
+                "isCustom": false
+              }
+            ],
+            "line": 12,
+            "column": 8
+          }
+        }
+      ],
+      "features": []
+    },
+    {
+      "path": "src\\CronSchedulerApp\\CronSchedulerApp.csproj",
+      "startingProject": true,
+      "issues": 5,
+      "storyPoints": 29,
+      "properties": {
+        "appName": "CronSchedulerApp",
+        "projectKind": "AspNetCore",
+        "frameworks": [
+          "net8.0"
+        ],
+        "languages": [
+          "C#"
+        ],
+        "tools": [
+          "MSBuild"
+        ],
+        "isSdkStyle": true,
+        "numberOfFiles": 39,
+        "numberOfCodeFiles": 30,
+        "linesTotal": 1677,
+        "linesOfCode": 1586,
+        "totalApiScanned": 4249,
+        "minLinesOfCodeToChange": 18,
+        "maxLinesOfCodeToChange": 18
+      },
+      "ruleInstances": [
+        {
+          "incidentId": "cf29edd3-4db6-4053-a3ad-50762597d5c1",
+          "ruleId": "NuGet.0002",
+          "projectPath": "src\\CronSchedulerApp\\CronSchedulerApp.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore, 8.0.30\n\nRecommendation:\n\nRemove Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore, and replace with new package Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore 10.0.11",
+              "protected": "Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore, 8.0.30\n\nRecommendation:\n\nRemove Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore, and replace with new package Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore 10.0.11"
+            },
+            "kind": "File",
+            "path": "src\\CronSchedulerApp\\CronSchedulerApp.csproj",
+            "snippet": "Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore, 8.0.30\n\nRecommendation:\n\nRemove Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore, and replace with new package Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore 10.0.11",
+            "protectedSnippet": "Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore, 8.0.30\n\nRecommendation:\n\nRemove Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore, and replace with new package Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore 10.0.11",
+            "label": "Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore 8.0.30",
+            "properties": {
+              "PackageId": "Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore",
+              "PackageVersion": "8.0.30",
+              "PackageNewVersion": "10.0.11",
+              "PackageReplacements": null
+            }
+          }
+        },
+        {
+          "incidentId": "2d0bdbfe-bf3a-4b34-86dd-85b5a0bcd686",
+          "ruleId": "NuGet.0002",
+          "projectPath": "src\\CronSchedulerApp\\CronSchedulerApp.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Microsoft.AspNetCore.Identity.EntityFrameworkCore, 8.0.30\n\nRecommendation:\n\nRemove Microsoft.AspNetCore.Identity.EntityFrameworkCore, and replace with new package Microsoft.AspNetCore.Identity.EntityFrameworkCore 10.0.11",
+              "protected": "Microsoft.AspNetCore.Identity.EntityFrameworkCore, 8.0.30\n\nRecommendation:\n\nRemove Microsoft.AspNetCore.Identity.EntityFrameworkCore, and replace with new package Microsoft.AspNetCore.Identity.EntityFrameworkCore 10.0.11"
+            },
+            "kind": "File",
+            "path": "src\\CronSchedulerApp\\CronSchedulerApp.csproj",
+            "snippet": "Microsoft.AspNetCore.Identity.EntityFrameworkCore, 8.0.30\n\nRecommendation:\n\nRemove Microsoft.AspNetCore.Identity.EntityFrameworkCore, and replace with new package Microsoft.AspNetCore.Identity.EntityFrameworkCore 10.0.11",
+            "protectedSnippet": "Microsoft.AspNetCore.Identity.EntityFrameworkCore, 8.0.30\n\nRecommendation:\n\nRemove Microsoft.AspNetCore.Identity.EntityFrameworkCore, and replace with new package Microsoft.AspNetCore.Identity.EntityFrameworkCore 10.0.11",
+            "label": "Microsoft.AspNetCore.Identity.EntityFrameworkCore 8.0.30",
+            "properties": {
+              "PackageId": "Microsoft.AspNetCore.Identity.EntityFrameworkCore",
+              "PackageVersion": "8.0.30",
+              "PackageNewVersion": "10.0.11",
+              "PackageReplacements": null
+            }
+          }
+        },
+        {
+          "incidentId": "e75a9d69-79b9-4120-a6c6-c63819696d7f",
+          "ruleId": "NuGet.0002",
+          "projectPath": "src\\CronSchedulerApp\\CronSchedulerApp.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Microsoft.AspNetCore.Identity.UI, 8.0.30\n\nRecommendation:\n\nRemove Microsoft.AspNetCore.Identity.UI, and replace with new package Microsoft.AspNetCore.Identity.UI 10.0.11",
+              "protected": "Microsoft.AspNetCore.Identity.UI, 8.0.30\n\nRecommendation:\n\nRemove Microsoft.AspNetCore.Identity.UI, and replace with new package Microsoft.AspNetCore.Identity.UI 10.0.11"
+            },
+            "kind": "File",
+            "path": "src\\CronSchedulerApp\\CronSchedulerApp.csproj",
+            "snippet": "Microsoft.AspNetCore.Identity.UI, 8.0.30\n\nRecommendation:\n\nRemove Microsoft.AspNetCore.Identity.UI, and replace with new package Microsoft.AspNetCore.Identity.UI 10.0.11",
+            "protectedSnippet": "Microsoft.AspNetCore.Identity.UI, 8.0.30\n\nRecommendation:\n\nRemove Microsoft.AspNetCore.Identity.UI, and replace with new package Microsoft.AspNetCore.Identity.UI 10.0.11",
+            "label": "Microsoft.AspNetCore.Identity.UI 8.0.30",
+            "properties": {
+              "PackageId": "Microsoft.AspNetCore.Identity.UI",
+              "PackageVersion": "8.0.30",
+              "PackageNewVersion": "10.0.11",
+              "PackageReplacements": null
+            }
+          }
+        },
+        {
+          "incidentId": "9276be67-19ef-4a74-b4a9-2463c9aab3a6",
+          "ruleId": "NuGet.0002",
+          "projectPath": "src\\CronSchedulerApp\\CronSchedulerApp.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Microsoft.AspNetCore.Mvc.NewtonsoftJson, 8.0.30\n\nRecommendation:\n\nRemove Microsoft.AspNetCore.Mvc.NewtonsoftJson, and replace with new package Microsoft.AspNetCore.Mvc.NewtonsoftJson 10.0.11",
+              "protected": "Microsoft.AspNetCore.Mvc.NewtonsoftJson, 8.0.30\n\nRecommendation:\n\nRemove Microsoft.AspNetCore.Mvc.NewtonsoftJson, and replace with new package Microsoft.AspNetCore.Mvc.NewtonsoftJson 10.0.11"
+            },
+            "kind": "File",
+            "path": "src\\CronSchedulerApp\\CronSchedulerApp.csproj",
+            "snippet": "Microsoft.AspNetCore.Mvc.NewtonsoftJson, 8.0.30\n\nRecommendation:\n\nRemove Microsoft.AspNetCore.Mvc.NewtonsoftJson, and replace with new package Microsoft.AspNetCore.Mvc.NewtonsoftJson 10.0.11",
+            "protectedSnippet": "Microsoft.AspNetCore.Mvc.NewtonsoftJson, 8.0.30\n\nRecommendation:\n\nRemove Microsoft.AspNetCore.Mvc.NewtonsoftJson, and replace with new package Microsoft.AspNetCore.Mvc.NewtonsoftJson 10.0.11",
+            "label": "Microsoft.AspNetCore.Mvc.NewtonsoftJson 8.0.30",
+            "properties": {
+              "PackageId": "Microsoft.AspNetCore.Mvc.NewtonsoftJson",
+              "PackageVersion": "8.0.30",
+              "PackageNewVersion": "10.0.11",
+              "PackageReplacements": null
+            }
+          }
+        },
+        {
+          "incidentId": "3ccdfcb1-dab4-4d16-9f40-cbf230145538",
+          "ruleId": "NuGet.0002",
+          "projectPath": "src\\CronSchedulerApp\\CronSchedulerApp.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Microsoft.EntityFrameworkCore.Relational, 8.0.30\n\nRecommendation:\n\nRemove Microsoft.EntityFrameworkCore.Relational, and replace with new package Microsoft.EntityFrameworkCore.Relational 10.0.11",
+              "protected": "Microsoft.EntityFrameworkCore.Relational, 8.0.30\n\nRecommendation:\n\nRemove Microsoft.EntityFrameworkCore.Relational, and replace with new package Microsoft.EntityFrameworkCore.Relational 10.0.11"
+            },
+            "kind": "File",
+            "path": "src\\CronSchedulerApp\\CronSchedulerApp.csproj",
+            "snippet": "Microsoft.EntityFrameworkCore.Relational, 8.0.30\n\nRecommendation:\n\nRemove Microsoft.EntityFrameworkCore.Relational, and replace with new package Microsoft.EntityFrameworkCore.Relational 10.0.11",
+            "protectedSnippet": "Microsoft.EntityFrameworkCore.Relational, 8.0.30\n\nRecommendation:\n\nRemove Microsoft.EntityFrameworkCore.Relational, and replace with new package Microsoft.EntityFrameworkCore.Relational 10.0.11",
+            "label": "Microsoft.EntityFrameworkCore.Relational 8.0.30",
+            "properties": {
+              "PackageId": "Microsoft.EntityFrameworkCore.Relational",
+              "PackageVersion": "8.0.30",
+              "PackageNewVersion": "10.0.11",
+              "PackageReplacements": null
+            }
+          }
+        },
+        {
+          "incidentId": "b0c4f40d-f4fa-4517-9bfd-27606c58f43f",
+          "ruleId": "NuGet.0002",
+          "projectPath": "src\\CronSchedulerApp\\CronSchedulerApp.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Microsoft.EntityFrameworkCore.Sqlite, 8.0.30\n\nRecommendation:\n\nRemove Microsoft.EntityFrameworkCore.Sqlite, and replace with new package Microsoft.EntityFrameworkCore.Sqlite 10.0.11",
+              "protected": "Microsoft.EntityFrameworkCore.Sqlite, 8.0.30\n\nRecommendation:\n\nRemove Microsoft.EntityFrameworkCore.Sqlite, and replace with new package Microsoft.EntityFrameworkCore.Sqlite 10.0.11"
+            },
+            "kind": "File",
+            "path": "src\\CronSchedulerApp\\CronSchedulerApp.csproj",
+            "snippet": "Microsoft.EntityFrameworkCore.Sqlite, 8.0.30\n\nRecommendation:\n\nRemove Microsoft.EntityFrameworkCore.Sqlite, and replace with new package Microsoft.EntityFrameworkCore.Sqlite 10.0.11",
+            "protectedSnippet": "Microsoft.EntityFrameworkCore.Sqlite, 8.0.30\n\nRecommendation:\n\nRemove Microsoft.EntityFrameworkCore.Sqlite, and replace with new package Microsoft.EntityFrameworkCore.Sqlite 10.0.11",
+            "label": "Microsoft.EntityFrameworkCore.Sqlite 8.0.30",
+            "properties": {
+              "PackageId": "Microsoft.EntityFrameworkCore.Sqlite",
+              "PackageVersion": "8.0.30",
+              "PackageNewVersion": "10.0.11",
+              "PackageReplacements": null
+            }
+          }
+        },
+        {
+          "incidentId": "50a17ee5-daf9-4fa9-a226-ed7c27cca985",
+          "ruleId": "NuGet.0002",
+          "projectPath": "src\\CronSchedulerApp\\CronSchedulerApp.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Microsoft.EntityFrameworkCore.SqlServer, 8.0.30\n\nRecommendation:\n\nRemove Microsoft.EntityFrameworkCore.SqlServer, and replace with new package Microsoft.EntityFrameworkCore.SqlServer 10.0.11",
+              "protected": "Microsoft.EntityFrameworkCore.SqlServer, 8.0.30\n\nRecommendation:\n\nRemove Microsoft.EntityFrameworkCore.SqlServer, and replace with new package Microsoft.EntityFrameworkCore.SqlServer 10.0.11"
+            },
+            "kind": "File",
+            "path": "src\\CronSchedulerApp\\CronSchedulerApp.csproj",
+            "snippet": "Microsoft.EntityFrameworkCore.SqlServer, 8.0.30\n\nRecommendation:\n\nRemove Microsoft.EntityFrameworkCore.SqlServer, and replace with new package Microsoft.EntityFrameworkCore.SqlServer 10.0.11",
+            "protectedSnippet": "Microsoft.EntityFrameworkCore.SqlServer, 8.0.30\n\nRecommendation:\n\nRemove Microsoft.EntityFrameworkCore.SqlServer, and replace with new package Microsoft.EntityFrameworkCore.SqlServer 10.0.11",
+            "label": "Microsoft.EntityFrameworkCore.SqlServer 8.0.30",
+            "properties": {
+              "PackageId": "Microsoft.EntityFrameworkCore.SqlServer",
+              "PackageVersion": "8.0.30",
+              "PackageNewVersion": "10.0.11",
+              "PackageReplacements": null
+            }
+          }
+        },
+        {
+          "incidentId": "ba4241b2-1fbc-48cb-a978-5a318ca4f830",
+          "ruleId": "NuGet.0002",
+          "projectPath": "src\\CronSchedulerApp\\CronSchedulerApp.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Microsoft.EntityFrameworkCore.Tools, 8.0.30\n\nRecommendation:\n\nRemove Microsoft.EntityFrameworkCore.Tools, and replace with new package Microsoft.EntityFrameworkCore.Tools 10.0.11",
+              "protected": "Microsoft.EntityFrameworkCore.Tools, 8.0.30\n\nRecommendation:\n\nRemove Microsoft.EntityFrameworkCore.Tools, and replace with new package Microsoft.EntityFrameworkCore.Tools 10.0.11"
+            },
+            "kind": "File",
+            "path": "src\\CronSchedulerApp\\CronSchedulerApp.csproj",
+            "snippet": "Microsoft.EntityFrameworkCore.Tools, 8.0.30\n\nRecommendation:\n\nRemove Microsoft.EntityFrameworkCore.Tools, and replace with new package Microsoft.EntityFrameworkCore.Tools 10.0.11",
+            "protectedSnippet": "Microsoft.EntityFrameworkCore.Tools, 8.0.30\n\nRecommendation:\n\nRemove Microsoft.EntityFrameworkCore.Tools, and replace with new package Microsoft.EntityFrameworkCore.Tools 10.0.11",
+            "label": "Microsoft.EntityFrameworkCore.Tools 8.0.30",
+            "properties": {
+              "PackageId": "Microsoft.EntityFrameworkCore.Tools",
+              "PackageVersion": "8.0.30",
+              "PackageNewVersion": "10.0.11",
+              "PackageReplacements": null
+            }
+          }
+        },
+        {
+          "incidentId": "54b4d6cf-6874-4205-b086-3d6b70d4230e",
+          "ruleId": "NuGet.0002",
+          "projectPath": "src\\CronSchedulerApp\\CronSchedulerApp.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Microsoft.Extensions.Http.Polly, 8.0.30\n\nRecommendation:\n\nRemove Microsoft.Extensions.Http.Polly, and replace with new package Microsoft.Extensions.Http.Polly 10.0.11",
+              "protected": "Microsoft.Extensions.Http.Polly, 8.0.30\n\nRecommendation:\n\nRemove Microsoft.Extensions.Http.Polly, and replace with new package Microsoft.Extensions.Http.Polly 10.0.11"
+            },
+            "kind": "File",
+            "path": "src\\CronSchedulerApp\\CronSchedulerApp.csproj",
+            "snippet": "Microsoft.Extensions.Http.Polly, 8.0.30\n\nRecommendation:\n\nRemove Microsoft.Extensions.Http.Polly, and replace with new package Microsoft.Extensions.Http.Polly 10.0.11",
+            "protectedSnippet": "Microsoft.Extensions.Http.Polly, 8.0.30\n\nRecommendation:\n\nRemove Microsoft.Extensions.Http.Polly, and replace with new package Microsoft.Extensions.Http.Polly 10.0.11",
+            "label": "Microsoft.Extensions.Http.Polly 8.0.30",
+            "properties": {
+              "PackageId": "Microsoft.Extensions.Http.Polly",
+              "PackageVersion": "8.0.30",
+              "PackageNewVersion": "10.0.11",
+              "PackageReplacements": null
+            }
+          }
+        },
+        {
+          "incidentId": "753e5b5b-5fa4-4163-899f-361412a0efee",
+          "ruleId": "NuGet.0001",
+          "projectPath": "src\\CronSchedulerApp\\CronSchedulerApp.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Microsoft.VisualStudio.Azure.Containers.Tools.Targets, 1.23.0\n\nRecommendation:\n\nNo supported version found",
+              "protected": "Microsoft.VisualStudio.Azure.Containers.Tools.Targets, 1.23.0\n\nRecommendation:\n\nNo supported version found"
+            },
+            "kind": "File",
+            "path": "src\\CronSchedulerApp\\CronSchedulerApp.csproj",
+            "snippet": "Microsoft.VisualStudio.Azure.Containers.Tools.Targets, 1.23.0\n\nRecommendation:\n\nNo supported version found",
+            "protectedSnippet": "Microsoft.VisualStudio.Azure.Containers.Tools.Targets, 1.23.0\n\nRecommendation:\n\nNo supported version found",
+            "label": "Microsoft.VisualStudio.Azure.Containers.Tools.Targets 1.23.0",
+            "properties": {
+              "PackageId": "Microsoft.VisualStudio.Azure.Containers.Tools.Targets",
+              "PackageVersion": "1.23.0",
+              "PackageNewVersion": null,
+              "PackageReplacements": null
+            }
+          }
+        },
+        {
+          "incidentId": "c5ceeb75-3b1b-4fdc-8acc-418811ab73ea",
+          "ruleId": "Project.0002",
+          "projectPath": "src\\CronSchedulerApp\\CronSchedulerApp.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Current target framework: net8.0\nRecommended target framework: net10.0",
+              "protected": "Current target framework: net8.0\nRecommended target framework: net10.0"
+            },
+            "kind": "File",
+            "path": "src\\CronSchedulerApp\\CronSchedulerApp.csproj",
+            "snippet": "Current target framework: net8.0\nRecommended target framework: net10.0",
+            "protectedSnippet": "Current target framework: net8.0\nRecommended target framework: net10.0",
+            "properties": {
+              "CurrentTargetFramework": "net8.0",
+              "RecommendedTargetFramework": "net10.0"
+            }
+          }
+        },
+        {
+          "incidentId": "dbbace20-290e-4ce4-8be2-335e7ef63852",
+          "ruleId": "Api.0002",
+          "description": "Breaking change: New TimeSpan.From*() overloads that take integers ",
+          "projectPath": "src\\CronSchedulerApp\\CronSchedulerApp.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "await Task.Delay(TimeSpan.FromSeconds(10), token);",
+              "protected": "M:System.TimeSpan.FromSeconds(System.Double)"
+            },
+            "kind": "File",
+            "path": "src\\CronSchedulerApp\\Controllers\\HomeController.cs",
+            "snippet": "await Task.Delay(TimeSpan.FromSeconds(10), token);",
+            "protectedSnippet": "M:System.TimeSpan.FromSeconds(System.Double)",
+            "label": "M:System.TimeSpan.FromSeconds(System.Double)",
+            "properties": {
+              "CharCount": "4922"
+            },
+            "links": [
+              {
+                "title": "API documentation",
+                "url": "https://github.com/dotnet/docs/blob/main/docs/core/compatibility/core-libraries/9.0/timespan-from-overloads.md",
+                "isCustom": false
+              }
+            ],
+            "line": 136,
+            "column": 20
+          }
+        },
+        {
+          "incidentId": "ebe79763-a1d1-4804-b4df-83d2b431a77e",
+          "ruleId": "Api.0003",
+          "description": "Breaking change: URI length limits removed ",
+          "projectPath": "src\\CronSchedulerApp\\CronSchedulerApp.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "ViewBag.Url = $\u0022https://studybible.info/KJV_Strongs/{Uri.EscapeDataString($\u0022{bookName} {chapter}:{verses}\u0022)}\u0022;",
+              "protected": "T:System.Uri"
+            },
+            "kind": "File",
+            "path": "src\\CronSchedulerApp\\Controllers\\HomeController.cs",
+            "snippet": "ViewBag.Url = $\u0022https://studybible.info/KJV_Strongs/{Uri.EscapeDataString($\u0022{bookName} {chapter}:{verses}\u0022)}\u0022;",
+            "protectedSnippet": "T:System.Uri",
+            "label": "T:System.Uri",
+            "properties": {
+              "CharCount": "4922"
+            },
+            "links": [
+              {
+                "title": "API documentation",
+                "url": "https://github.com/dotnet/docs/blob/main/docs/core/compatibility/networking/10.0/uri-length-limits-removed.md",
+                "isCustom": false
+              }
+            ],
+            "line": 72,
+            "column": 12
+          }
+        },
+        {
+          "incidentId": "9602afe1-eb91-4227-a0c7-09f22f120fff",
+          "ruleId": "Api.0002",
+          "description": "API is available in package Microsoft.AspNetCore.Identity.EntityFrameworkCore, 8.0.6. Add package reference to Microsoft.AspNetCore.Identity.EntityFrameworkCore, 8.0.6",
+          "projectPath": "src\\CronSchedulerApp\\CronSchedulerApp.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": ": base(options)",
+              "protected": "M:Microsoft.AspNetCore.Identity.EntityFrameworkCore.IdentityDbContext.#ctor(Microsoft.EntityFrameworkCore.DbContextOptions)"
+            },
+            "kind": "File",
+            "path": "src\\CronSchedulerApp\\Data\\ApplicationDbContext.cs",
+            "snippet": ": base(options)",
+            "protectedSnippet": "M:Microsoft.AspNetCore.Identity.EntityFrameworkCore.IdentityDbContext.#ctor(Microsoft.EntityFrameworkCore.DbContextOptions)",
+            "label": "M:Microsoft.AspNetCore.Identity.EntityFrameworkCore.IdentityDbContext.#ctor(Microsoft.EntityFrameworkCore.DbContextOptions)",
+            "properties": {
+              "PackageId": "Microsoft.AspNetCore.Identity.EntityFrameworkCore",
+              "PackageNewVersion": "8.0.6",
+              "CharCount": "315"
+            },
+            "line": 8,
+            "column": 8
+          }
+        },
+        {
+          "incidentId": "17b4b969-f0ba-4b49-a5e2-c170435ef531",
+          "ruleId": "Api.0002",
+          "description": "API is available in package Microsoft.AspNetCore.Identity.EntityFrameworkCore, 8.0.6. Add package reference to Microsoft.AspNetCore.Identity.EntityFrameworkCore, 8.0.6",
+          "projectPath": "src\\CronSchedulerApp\\CronSchedulerApp.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": ": base(options)",
+              "protected": "M:Microsoft.AspNetCore.Identity.EntityFrameworkCore.IdentityDbContext.#ctor(Microsoft.EntityFrameworkCore.DbContextOptions)"
+            },
+            "kind": "File",
+            "path": "src\\CronSchedulerApp\\Data\\ApplicationDbContext.cs",
+            "snippet": ": base(options)",
+            "protectedSnippet": "M:Microsoft.AspNetCore.Identity.EntityFrameworkCore.IdentityDbContext.#ctor(Microsoft.EntityFrameworkCore.DbContextOptions)",
+            "label": "M:Microsoft.AspNetCore.Identity.EntityFrameworkCore.IdentityDbContext.#ctor(Microsoft.EntityFrameworkCore.DbContextOptions)",
+            "properties": {
+              "PackageId": "Microsoft.AspNetCore.Identity.EntityFrameworkCore",
+              "PackageNewVersion": "8.0.6",
+              "CharCount": "315"
+            },
+            "line": 8,
+            "column": 8
+          }
+        },
+        {
+          "incidentId": "4d549af8-a53f-485e-8f41-d8af367b7f4c",
+          "ruleId": "Api.0002",
+          "description": "API is available in package Microsoft.AspNetCore.Identity.EntityFrameworkCore, 8.0.6. Add package reference to Microsoft.AspNetCore.Identity.EntityFrameworkCore, 8.0.6",
+          "projectPath": "src\\CronSchedulerApp\\CronSchedulerApp.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "IdentityDbContext",
+              "protected": "T:Microsoft.AspNetCore.Identity.EntityFrameworkCore.IdentityDbContext"
+            },
+            "kind": "File",
+            "path": "src\\CronSchedulerApp\\Data\\ApplicationDbContext.cs",
+            "snippet": "IdentityDbContext",
+            "protectedSnippet": "T:Microsoft.AspNetCore.Identity.EntityFrameworkCore.IdentityDbContext",
+            "label": "T:Microsoft.AspNetCore.Identity.EntityFrameworkCore.IdentityDbContext",
+            "properties": {
+              "PackageId": "Microsoft.AspNetCore.Identity.EntityFrameworkCore",
+              "PackageNewVersion": "8.0.6",
+              "CharCount": "315"
+            },
+            "line": 5,
+            "column": 36
+          }
+        },
+        {
+          "incidentId": "74c2116b-6723-45b2-9c0e-32bb4dde29dd",
+          "ruleId": "Api.0003",
+          "description": "Breaking change - Streaming HTTP responses enabled by default in browser HTTP clients ",
+          "projectPath": "src\\CronSchedulerApp\\CronSchedulerApp.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "var result = await response.Content.ReadAsStringAsync(cancellationToken);",
+              "protected": "T:System.Net.Http.HttpContent"
+            },
+            "kind": "File",
+            "path": "src\\CronSchedulerApp\\Services\\TorahService.cs",
+            "snippet": "var result = await response.Content.ReadAsStringAsync(cancellationToken);",
+            "protectedSnippet": "T:System.Net.Http.HttpContent",
+            "label": "T:System.Net.Http.HttpContent",
+            "properties": {
+              "CharCount": "2425"
+            },
+            "links": [
+              {
+                "title": "API documentation",
+                "url": "https://github.com/dotnet/docs/blob/main/docs/core/compatibility/networking/10.0/default-http-streaming.md",
+                "isCustom": false
+              }
+            ],
+            "line": 72,
+            "column": 8
+          }
+        },
+        {
+          "incidentId": "a9079f41-f8e3-4d61-8399-bd3ba4f439cd",
+          "ruleId": "Api.0003",
+          "description": "Breaking change: URI length limits removed ",
+          "projectPath": "src\\CronSchedulerApp\\CronSchedulerApp.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "var args = new Dictionary\u003Cstring, string?\u003E\r\n        {\r\n            { \u0022type\u0022, \u0022json\u0022 },\r\n            { \u0022passage\u0022, Uri.EscapeDataString(exp) }\r\n        };",
+              "protected": "T:System.Uri"
+            },
+            "kind": "File",
+            "path": "src\\CronSchedulerApp\\Services\\TorahService.cs",
+            "snippet": "var args = new Dictionary\u003Cstring, string?\u003E\r\n        {\r\n            { \u0022type\u0022, \u0022json\u0022 },\r\n            { \u0022passage\u0022, Uri.EscapeDataString(exp) }\r\n        };",
+            "protectedSnippet": "T:System.Uri",
+            "label": "T:System.Uri",
+            "properties": {
+              "CharCount": "2425"
+            },
+            "links": [
+              {
+                "title": "API documentation",
+                "url": "https://github.com/dotnet/docs/blob/main/docs/core/compatibility/networking/10.0/uri-length-limits-removed.md",
+                "isCustom": false
+              }
+            ],
+            "line": 60,
+            "column": 8
+          }
+        },
+        {
+          "incidentId": "9570dc7e-1fc3-475e-9654-566d85e9c841",
+          "ruleId": "Api.0002",
+          "description": "Breaking change: New TimeSpan.From*() overloads that take integers ",
+          "projectPath": "src\\CronSchedulerApp\\CronSchedulerApp.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "await Task.Delay(TimeSpan.FromSeconds(3));",
+              "protected": "M:System.TimeSpan.FromSeconds(System.Double)"
+            },
+            "kind": "File",
+            "path": "src\\CronSchedulerApp\\Jobs\\Startup\\TestStartupJob.cs",
+            "snippet": "await Task.Delay(TimeSpan.FromSeconds(3));",
+            "protectedSnippet": "M:System.TimeSpan.FromSeconds(System.Double)",
+            "label": "M:System.TimeSpan.FromSeconds(System.Double)",
+            "properties": {
+              "CharCount": "776"
+            },
+            "links": [
+              {
+                "title": "API documentation",
+                "url": "https://github.com/dotnet/docs/blob/main/docs/core/compatibility/core-libraries/9.0/timespan-from-overloads.md",
+                "isCustom": false
+              }
+            ],
+            "line": 23,
+            "column": 12
+          }
+        },
+        {
+          "incidentId": "bb7bb9d2-0c67-41a3-bd40-31dc88b393fb",
+          "ruleId": "Api.0003",
+          "description": "Breaking change: Exception diagnostics are suppressed when IExceptionHandler.TryHandleAsync returns true ",
+          "projectPath": "src\\CronSchedulerApp\\CronSchedulerApp.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "app.UseExceptionHandler(\u0022/Home/Error\u0022);",
+              "protected": "M:Microsoft.AspNetCore.Builder.ExceptionHandlerExtensions.UseExceptionHandler(Microsoft.AspNetCore.Builder.IApplicationBuilder,System.String)"
+            },
+            "kind": "File",
+            "path": "src\\CronSchedulerApp\\Program.cs",
+            "snippet": "app.UseExceptionHandler(\u0022/Home/Error\u0022);",
+            "protectedSnippet": "M:Microsoft.AspNetCore.Builder.ExceptionHandlerExtensions.UseExceptionHandler(Microsoft.AspNetCore.Builder.IApplicationBuilder,System.String)",
+            "label": "M:Microsoft.AspNetCore.Builder.ExceptionHandlerExtensions.UseExceptionHandler(Microsoft.AspNetCore.Builder.IApplicationBuilder,System.String)",
+            "properties": {
+              "CharCount": "3147"
+            },
+            "links": [
+              {
+                "title": "API documentation",
+                "url": "https://github.com/dotnet/docs/blob/main/docs/core/compatibility/aspnet-core/10/exception-handler-diagnostics-suppressed.md",
+                "isCustom": false
+              }
+            ],
+            "line": 86,
+            "column": 4
+          }
+        },
+        {
+          "incidentId": "0fc4dc26-f83e-4079-8632-c0163b7e7e7b",
+          "ruleId": "Api.0002",
+          "description": "API is available in package Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore, 8.0.6. Add package reference to Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore, 8.0.6",
+          "projectPath": "src\\CronSchedulerApp\\CronSchedulerApp.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "app.UseMigrationsEndPoint();",
+              "protected": "T:Microsoft.AspNetCore.Builder.MigrationsEndPointExtensions"
+            },
+            "kind": "File",
+            "path": "src\\CronSchedulerApp\\Program.cs",
+            "snippet": "app.UseMigrationsEndPoint();",
+            "protectedSnippet": "T:Microsoft.AspNetCore.Builder.MigrationsEndPointExtensions",
+            "label": "T:Microsoft.AspNetCore.Builder.MigrationsEndPointExtensions",
+            "properties": {
+              "PackageId": "Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore",
+              "PackageNewVersion": "8.0.6",
+              "CharCount": "3147"
+            },
+            "line": 82,
+            "column": 4
+          }
+        },
+        {
+          "incidentId": "8fe080d5-3b46-4ac8-af08-0f3465103c81",
+          "ruleId": "Api.0002",
+          "description": "API is available in package Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore, 8.0.6. Add package reference to Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore, 8.0.6",
+          "projectPath": "src\\CronSchedulerApp\\CronSchedulerApp.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "app.UseMigrationsEndPoint();",
+              "protected": "M:Microsoft.AspNetCore.Builder.MigrationsEndPointExtensions.UseMigrationsEndPoint(Microsoft.AspNetCore.Builder.IApplicationBuilder)"
+            },
+            "kind": "File",
+            "path": "src\\CronSchedulerApp\\Program.cs",
+            "snippet": "app.UseMigrationsEndPoint();",
+            "protectedSnippet": "M:Microsoft.AspNetCore.Builder.MigrationsEndPointExtensions.UseMigrationsEndPoint(Microsoft.AspNetCore.Builder.IApplicationBuilder)",
+            "label": "M:Microsoft.AspNetCore.Builder.MigrationsEndPointExtensions.UseMigrationsEndPoint(Microsoft.AspNetCore.Builder.IApplicationBuilder)",
+            "properties": {
+              "PackageId": "Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore",
+              "PackageNewVersion": "8.0.6",
+              "CharCount": "3147"
+            },
+            "line": 82,
+            "column": 4
+          }
+        },
+        {
+          "incidentId": "6f1b690c-74db-4df3-8100-3e20a4d2c085",
+          "ruleId": "Api.0003",
+          "description": "Breaking change: Message no longer duplicated in Console log output ",
+          "projectPath": "src\\CronSchedulerApp\\CronSchedulerApp.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "builder.Logging.AddConsole();",
+              "protected": "M:Microsoft.Extensions.Logging.ConsoleLoggerExtensions.AddConsole(Microsoft.Extensions.Logging.ILoggingBuilder)"
+            },
+            "kind": "File",
+            "path": "src\\CronSchedulerApp\\Program.cs",
+            "snippet": "builder.Logging.AddConsole();",
+            "protectedSnippet": "M:Microsoft.Extensions.Logging.ConsoleLoggerExtensions.AddConsole(Microsoft.Extensions.Logging.ILoggingBuilder)",
+            "label": "M:Microsoft.Extensions.Logging.ConsoleLoggerExtensions.AddConsole(Microsoft.Extensions.Logging.ILoggingBuilder)",
+            "properties": {
+              "CharCount": "3147"
+            },
+            "links": [
+              {
+                "title": "API documentation",
+                "url": "https://github.com/dotnet/docs/blob/main/docs/core/compatibility/extensions/10.0/console-json-logging-duplicate-messages.md",
+                "isCustom": false
+              }
+            ],
+            "line": 72,
+            "column": 0
+          }
+        },
+        {
+          "incidentId": "bf550082-d0e4-421e-b876-cb75bedba1bf",
+          "ruleId": "Api.0002",
+          "description": "API is available in package Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore, 8.0.6. Add package reference to Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore, 8.0.6",
+          "projectPath": "src\\CronSchedulerApp\\CronSchedulerApp.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "builder.Services.AddDatabaseDeveloperPageExceptionFilter();",
+              "protected": "T:Microsoft.Extensions.DependencyInjection.DatabaseDeveloperPageExceptionFilterServiceExtensions"
+            },
+            "kind": "File",
+            "path": "src\\CronSchedulerApp\\Program.cs",
+            "snippet": "builder.Services.AddDatabaseDeveloperPageExceptionFilter();",
+            "protectedSnippet": "T:Microsoft.Extensions.DependencyInjection.DatabaseDeveloperPageExceptionFilterServiceExtensions",
+            "label": "T:Microsoft.Extensions.DependencyInjection.DatabaseDeveloperPageExceptionFilterServiceExtensions",
+            "properties": {
+              "PackageId": "Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore",
+              "PackageNewVersion": "8.0.6",
+              "CharCount": "3147"
+            },
+            "line": 67,
+            "column": 0
+          }
+        },
+        {
+          "incidentId": "80e2f740-80ac-48be-b09d-0bbcfedc92e4",
+          "ruleId": "Api.0002",
+          "description": "API is available in package Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore, 8.0.6. Add package reference to Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore, 8.0.6",
+          "projectPath": "src\\CronSchedulerApp\\CronSchedulerApp.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "builder.Services.AddDatabaseDeveloperPageExceptionFilter();",
+              "protected": "M:Microsoft.Extensions.DependencyInjection.DatabaseDeveloperPageExceptionFilterServiceExtensions.AddDatabaseDeveloperPageExceptionFilter(Microsoft.Extensions.DependencyInjection.IServiceCollection)"
+            },
+            "kind": "File",
+            "path": "src\\CronSchedulerApp\\Program.cs",
+            "snippet": "builder.Services.AddDatabaseDeveloperPageExceptionFilter();",
+            "protectedSnippet": "M:Microsoft.Extensions.DependencyInjection.DatabaseDeveloperPageExceptionFilterServiceExtensions.AddDatabaseDeveloperPageExceptionFilter(Microsoft.Extensions.DependencyInjection.IServiceCollection)",
+            "label": "M:Microsoft.Extensions.DependencyInjection.DatabaseDeveloperPageExceptionFilterServiceExtensions.AddDatabaseDeveloperPageExceptionFilter(Microsoft.Extensions.DependencyInjection.IServiceCollection)",
+            "properties": {
+              "PackageId": "Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore",
+              "PackageNewVersion": "8.0.6",
+              "CharCount": "3147"
+            },
+            "line": 67,
+            "column": 0
+          }
+        },
+        {
+          "incidentId": "d634deba-00be-498f-ba95-448759dc06e2",
+          "ruleId": "Api.0002",
+          "description": "API is available in package Microsoft.AspNetCore.Identity.UI, 8.0.6. Add package reference to Microsoft.AspNetCore.Identity.UI, 8.0.6",
+          "projectPath": "src\\CronSchedulerApp\\CronSchedulerApp.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "builder.Services.AddDefaultIdentity\u003CIdentityUser\u003E()\r\n    .AddEntityFrameworkStores\u003CApplicationDbContext\u003E();",
+              "protected": "T:Microsoft.Extensions.DependencyInjection.IdentityServiceCollectionUIExtensions"
+            },
+            "kind": "File",
+            "path": "src\\CronSchedulerApp\\Program.cs",
+            "snippet": "builder.Services.AddDefaultIdentity\u003CIdentityUser\u003E()\r\n    .AddEntityFrameworkStores\u003CApplicationDbContext\u003E();",
+            "protectedSnippet": "T:Microsoft.Extensions.DependencyInjection.IdentityServiceCollectionUIExtensions",
+            "label": "T:Microsoft.Extensions.DependencyInjection.IdentityServiceCollectionUIExtensions",
+            "properties": {
+              "PackageId": "Microsoft.AspNetCore.Identity.UI",
+              "PackageNewVersion": "8.0.6",
+              "CharCount": "3147"
+            },
+            "line": 38,
+            "column": 0
+          }
+        },
+        {
+          "incidentId": "40255668-0859-4256-b6fd-aea63a458434",
+          "ruleId": "Api.0002",
+          "description": "API is available in package Microsoft.AspNetCore.Identity.UI, 8.0.6. Add package reference to Microsoft.AspNetCore.Identity.UI, 8.0.6",
+          "projectPath": "src\\CronSchedulerApp\\CronSchedulerApp.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "builder.Services.AddDefaultIdentity\u003CIdentityUser\u003E()\r\n    .AddEntityFrameworkStores\u003CApplicationDbContext\u003E();",
+              "protected": "M:Microsoft.Extensions.DependencyInjection.IdentityServiceCollectionUIExtensions.AddDefaultIdentity\u0060\u00601(Microsoft.Extensions.DependencyInjection.IServiceCollection)"
+            },
+            "kind": "File",
+            "path": "src\\CronSchedulerApp\\Program.cs",
+            "snippet": "builder.Services.AddDefaultIdentity\u003CIdentityUser\u003E()\r\n    .AddEntityFrameworkStores\u003CApplicationDbContext\u003E();",
+            "protectedSnippet": "M:Microsoft.Extensions.DependencyInjection.IdentityServiceCollectionUIExtensions.AddDefaultIdentity\u0060\u00601(Microsoft.Extensions.DependencyInjection.IServiceCollection)",
+            "label": "M:Microsoft.Extensions.DependencyInjection.IdentityServiceCollectionUIExtensions.AddDefaultIdentity\u0060\u00601(Microsoft.Extensions.DependencyInjection.IServiceCollection)",
+            "properties": {
+              "PackageId": "Microsoft.AspNetCore.Identity.UI",
+              "PackageNewVersion": "8.0.6",
+              "CharCount": "3147"
+            },
+            "line": 38,
+            "column": 0
+          }
+        },
+        {
+          "incidentId": "7f82cd4b-df84-4495-996c-00ccd171dce9",
+          "ruleId": "Api.0002",
+          "description": "API is available in package Microsoft.AspNetCore.Identity.EntityFrameworkCore, 8.0.6. Add package reference to Microsoft.AspNetCore.Identity.EntityFrameworkCore, 8.0.6",
+          "projectPath": "src\\CronSchedulerApp\\CronSchedulerApp.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "builder.Services.AddDefaultIdentity\u003CIdentityUser\u003E()\r\n    .AddEntityFrameworkStores\u003CApplicationDbContext\u003E();",
+              "protected": "T:Microsoft.Extensions.DependencyInjection.IdentityEntityFrameworkBuilderExtensions"
+            },
+            "kind": "File",
+            "path": "src\\CronSchedulerApp\\Program.cs",
+            "snippet": "builder.Services.AddDefaultIdentity\u003CIdentityUser\u003E()\r\n    .AddEntityFrameworkStores\u003CApplicationDbContext\u003E();",
+            "protectedSnippet": "T:Microsoft.Extensions.DependencyInjection.IdentityEntityFrameworkBuilderExtensions",
+            "label": "T:Microsoft.Extensions.DependencyInjection.IdentityEntityFrameworkBuilderExtensions",
+            "properties": {
+              "PackageId": "Microsoft.AspNetCore.Identity.EntityFrameworkCore",
+              "PackageNewVersion": "8.0.6",
+              "CharCount": "3147"
+            },
+            "line": 38,
+            "column": 0
+          }
+        },
+        {
+          "incidentId": "b82d0c54-0fee-4a43-b469-2eaaaf19fdb8",
+          "ruleId": "Api.0002",
+          "description": "API is available in package Microsoft.AspNetCore.Identity.EntityFrameworkCore, 8.0.6. Add package reference to Microsoft.AspNetCore.Identity.EntityFrameworkCore, 8.0.6",
+          "projectPath": "src\\CronSchedulerApp\\CronSchedulerApp.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "builder.Services.AddDefaultIdentity\u003CIdentityUser\u003E()\r\n    .AddEntityFrameworkStores\u003CApplicationDbContext\u003E();",
+              "protected": "M:Microsoft.Extensions.DependencyInjection.IdentityEntityFrameworkBuilderExtensions.AddEntityFrameworkStores\u0060\u00601(Microsoft.AspNetCore.Identity.IdentityBuilder)"
+            },
+            "kind": "File",
+            "path": "src\\CronSchedulerApp\\Program.cs",
+            "snippet": "builder.Services.AddDefaultIdentity\u003CIdentityUser\u003E()\r\n    .AddEntityFrameworkStores\u003CApplicationDbContext\u003E();",
+            "protectedSnippet": "M:Microsoft.Extensions.DependencyInjection.IdentityEntityFrameworkBuilderExtensions.AddEntityFrameworkStores\u0060\u00601(Microsoft.AspNetCore.Identity.IdentityBuilder)",
+            "label": "M:Microsoft.Extensions.DependencyInjection.IdentityEntityFrameworkBuilderExtensions.AddEntityFrameworkStores\u0060\u00601(Microsoft.AspNetCore.Identity.IdentityBuilder)",
+            "properties": {
+              "PackageId": "Microsoft.AspNetCore.Identity.EntityFrameworkCore",
+              "PackageNewVersion": "8.0.6",
+              "CharCount": "3147"
+            },
+            "line": 38,
+            "column": 0
+          }
+        }
+      ],
+      "features": []
+    },
+    {
+      "path": "src\\CronSchedulerWorker\\CronSchedulerWorker.csproj",
+      "startingProject": true,
+      "issues": 4,
+      "storyPoints": 4,
+      "properties": {
+        "appName": "CronSchedulerWorker",
+        "projectKind": "DotNetCoreApp",
+        "frameworks": [
+          "net8.0"
+        ],
+        "languages": [
+          "C#"
+        ],
+        "tools": [
+          "MSBuild"
+        ],
+        "isSdkStyle": true,
+        "numberOfFiles": 5,
+        "numberOfCodeFiles": 4,
+        "linesTotal": 141,
+        "linesOfCode": 122,
+        "totalApiScanned": 111,
+        "minLinesOfCodeToChange": 1,
+        "maxLinesOfCodeToChange": 1
+      },
+      "ruleInstances": [
+        {
+          "incidentId": "a04b97ec-2da1-45c9-86dd-942a2c98b6e2",
+          "ruleId": "NuGet.0002",
+          "projectPath": "src\\CronSchedulerWorker\\CronSchedulerWorker.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Microsoft.Extensions.Hosting, 8.0.1\n\nRecommendation:\n\nRemove Microsoft.Extensions.Hosting, and replace with new package Microsoft.Extensions.Hosting 10.0.11",
+              "protected": "Microsoft.Extensions.Hosting, 8.0.1\n\nRecommendation:\n\nRemove Microsoft.Extensions.Hosting, and replace with new package Microsoft.Extensions.Hosting 10.0.11"
+            },
+            "kind": "File",
+            "path": "src\\CronSchedulerWorker\\CronSchedulerWorker.csproj",
+            "snippet": "Microsoft.Extensions.Hosting, 8.0.1\n\nRecommendation:\n\nRemove Microsoft.Extensions.Hosting, and replace with new package Microsoft.Extensions.Hosting 10.0.11",
+            "protectedSnippet": "Microsoft.Extensions.Hosting, 8.0.1\n\nRecommendation:\n\nRemove Microsoft.Extensions.Hosting, and replace with new package Microsoft.Extensions.Hosting 10.0.11",
+            "label": "Microsoft.Extensions.Hosting 8.0.1",
+            "properties": {
+              "PackageId": "Microsoft.Extensions.Hosting",
+              "PackageVersion": "8.0.1",
+              "PackageNewVersion": "10.0.11",
+              "PackageReplacements": null
+            }
+          }
+        },
+        {
+          "incidentId": "99cb876f-c316-464d-a73c-ae547fe4739e",
+          "ruleId": "NuGet.0001",
+          "projectPath": "src\\CronSchedulerWorker\\CronSchedulerWorker.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Microsoft.VisualStudio.Azure.Containers.Tools.Targets, 1.23.0\n\nRecommendation:\n\nNo supported version found",
+              "protected": "Microsoft.VisualStudio.Azure.Containers.Tools.Targets, 1.23.0\n\nRecommendation:\n\nNo supported version found"
+            },
+            "kind": "File",
+            "path": "src\\CronSchedulerWorker\\CronSchedulerWorker.csproj",
+            "snippet": "Microsoft.VisualStudio.Azure.Containers.Tools.Targets, 1.23.0\n\nRecommendation:\n\nNo supported version found",
+            "protectedSnippet": "Microsoft.VisualStudio.Azure.Containers.Tools.Targets, 1.23.0\n\nRecommendation:\n\nNo supported version found",
+            "label": "Microsoft.VisualStudio.Azure.Containers.Tools.Targets 1.23.0",
+            "properties": {
+              "PackageId": "Microsoft.VisualStudio.Azure.Containers.Tools.Targets",
+              "PackageVersion": "1.23.0",
+              "PackageNewVersion": null,
+              "PackageReplacements": null
+            }
+          }
+        },
+        {
+          "incidentId": "240221fc-b510-42d3-bf21-d17738f935c5",
+          "ruleId": "Project.0002",
+          "projectPath": "src\\CronSchedulerWorker\\CronSchedulerWorker.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Current target framework: net8.0\nRecommended target framework: net10.0",
+              "protected": "Current target framework: net8.0\nRecommended target framework: net10.0"
+            },
+            "kind": "File",
+            "path": "src\\CronSchedulerWorker\\CronSchedulerWorker.csproj",
+            "snippet": "Current target framework: net8.0\nRecommended target framework: net10.0",
+            "protectedSnippet": "Current target framework: net8.0\nRecommended target framework: net10.0",
+            "properties": {
+              "CurrentTargetFramework": "net8.0",
+              "RecommendedTargetFramework": "net10.0"
+            }
+          }
+        },
+        {
+          "incidentId": "cf68d0db-4421-4f6e-aebc-1e9033ed3529",
+          "ruleId": "Api.0002",
+          "description": "Breaking change: New TimeSpan.From*() overloads that take integers ",
+          "projectPath": "src\\CronSchedulerWorker\\CronSchedulerWorker.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "await Task.Delay(TimeSpan.FromSeconds(3));",
+              "protected": "M:System.TimeSpan.FromSeconds(System.Double)"
+            },
+            "kind": "File",
+            "path": "src\\CronSchedulerWorker\\TestStartupJob.cs",
+            "snippet": "await Task.Delay(TimeSpan.FromSeconds(3));",
+            "protectedSnippet": "M:System.TimeSpan.FromSeconds(System.Double)",
+            "label": "M:System.TimeSpan.FromSeconds(System.Double)",
+            "properties": {
+              "CharCount": "707"
+            },
+            "links": [
+              {
+                "title": "API documentation",
+                "url": "https://github.com/dotnet/docs/blob/main/docs/core/compatibility/core-libraries/9.0/timespan-from-overloads.md",
+                "isCustom": false
+              }
+            ],
+            "line": 23,
+            "column": 8
+          }
+        }
+      ],
+      "features": []
+    }
+  ],
+  "rules": {
+    "NuGet.0002": {
+      "id": "NuGet.0002",
+      "isFeature": false,
+      "description": "NuGet package upgrade is recommended for selected target framework.\n\nStandard .NET packages are recommended to have versions matching version of .NET that project targets.\n\nSome other packages also are known to work better for selected target frameworks.",
+      "label": "NuGet package upgrade is recommended",
+      "severity": "Potential",
+      "effort": 1,
+      "links": [
+        {
+          "url": "https://go.microsoft.com/fwlink/?linkid=2262530",
+          "isCustom": false
+        }
+      ]
+    },
+    "NuGet.0003": {
+      "id": "NuGet.0003",
+      "isFeature": false,
+      "description": "NuGet package functionality is included with framework reference.\n\nPackage needs to be removed.",
+      "label": "NuGet package functionality is included with framework reference",
+      "severity": "Mandatory",
+      "effort": 1,
+      "links": [
+        {
+          "url": "https://go.microsoft.com/fwlink/?linkid=2262609",
+          "isCustom": false
+        }
+      ]
+    },
+    "Project.0002": {
+      "id": "Project.0002",
+      "isFeature": false,
+      "description": "Project\u0027s target framework(s) needs to be changed to the new target framework that you selected for this upgrade.\n\nDuring upgrade target framework will be adjusted to corresponding platform when applicable. In some cases project would result in multiple target frameworks after the upgrade if it was using features that now have their own platforms in modern .NET frameworks (windows, iOS, Android etc).",
+      "label": "Project\u0027s target framework(s) needs to be changed",
+      "severity": "Mandatory",
+      "effort": 1,
+      "links": [
+        {
+          "title": "Overview of porting from .NET Framework to .NET",
+          "url": "https://go.microsoft.com/fwlink/?linkid=2265227",
+          "isCustom": false
+        },
+        {
+          "title": ".NET project SDKs",
+          "url": "https://go.microsoft.com/fwlink/?linkid=2265226",
+          "isCustom": false
+        }
+      ]
+    },
+    "Api.0002": {
+      "id": "Api.0002",
+      "isFeature": false,
+      "description": "API is source incompatible for selected .NET version: requires code changes to compile successfully when targeting a new version, such as removing obsolete APIs or changing method signatures.",
+      "label": "Source incompatible for selected .NET version",
+      "severity": "Potential",
+      "effort": 1,
+      "links": [
+        {
+          "title": "Breaking changes in .NET",
+          "url": "https://go.microsoft.com/fwlink/?linkid=2262679",
+          "isCustom": false
+        }
+      ]
+    },
+    "NuGet.0005": {
+      "id": "NuGet.0005",
+      "isFeature": false,
+      "description": "NuGet package is deprecated.\n\nGo to its documentation and if there is a guidance for replacement of functionality provided by this package.",
+      "label": "NuGet package is deprecated",
+      "severity": "Optional",
+      "effort": 1,
+      "links": [
+        {
+          "url": "https://go.microsoft.com/fwlink/?linkid=2262531",
+          "isCustom": false
+        }
+      ]
+    },
+    "Api.0003": {
+      "id": "Api.0003",
+      "isFeature": false,
+      "description": "API has a behavioral change in selected .NET version: code and binaries may behave differently at runtime without needing recompilation, but the new behavior might be undesirable and require updates.",
+      "label": "Behavioral change in selected .NET version",
+      "severity": "Potential",
+      "effort": 1
+    },
+    "NuGet.0001": {
+      "id": "NuGet.0001",
+      "isFeature": false,
+      "description": "NuGet package is incompatible with selected target framework.\n\nPackage needs to be upgraded to a version supporting selected project target framework. If there no new package versions supporting new target framework, different package needs to be used and all code needs to be upgraded to new API.",
+      "label": "NuGet package is incompatible",
+      "severity": "Mandatory",
+      "effort": 1,
+      "links": [
+        {
+          "url": "https://go.microsoft.com/fwlink/?linkid=2262529",
+          "isCustom": false
+        }
+      ]
+    }
+  }
+}
