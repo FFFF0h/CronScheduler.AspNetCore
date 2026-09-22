@@ -13,15 +13,15 @@
 
 	<ItemGroup>
 		<PackageReference Include="Cronos" />
-		<PackageReference Include="Microsoft.Extensions.Hosting.Abstractions" Version="10.0.11" />
-		<PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="10.0.11" />
-		<PackageReference Include="Microsoft.Extensions.Options.ConfigurationExtensions" Version="10.0.11" />
-		<PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="10.0.11" />
+		<PackageReference Include="Microsoft.Extensions.Hosting.Abstractions" Version="10.0.12" />
+		<PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="10.0.12" />
+		<PackageReference Include="Microsoft.Extensions.Options.ConfigurationExtensions" Version="10.0.12" />
+		<PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="10.0.12" />
 		<PackageReference Include="Bet.Extensions.Options" />
 	</ItemGroup>
 
 
 	<ItemGroup>
-	  <PackageReference Update="Microsoft.SourceLink.GitHub" Version="10.0.400" />
+		<PackageReference Update="Microsoft.SourceLink.GitHub" Version="10.0.401" />
 	</ItemGroup>
 </Project>

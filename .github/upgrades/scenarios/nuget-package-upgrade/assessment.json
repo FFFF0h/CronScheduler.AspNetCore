@@ -1,0 +1,850 @@
+{
+  "settings": {
+    "components": {
+      "code": true,
+      "binaries": false
+    },
+    "targetId": ""
+  },
+  "analysisStartTime": "2026-09-22T09:20:55.7750482Z",
+  "analysisEndTime": "2026-09-22T09:20:57.0316852Z",
+  "privacyModeHelpUrl": "https://go.microsoft.com/fwlink/?linkid=2270980",
+  "stats": {
+    "summary": {
+      "projects": 5,
+      "issues": 1,
+      "incidents": 27,
+      "effort": 0
+    },
+    "charts": {
+      "severity": {
+        "Mandatory": 0,
+        "Optional": 0,
+        "Potential": 0,
+        "Information": 27
+      },
+      "category": {
+        "Pkg": 27
+      }
+    }
+  },
+  "projects": [
+    {
+      "path": "src\\CronScheduler.AspNetCore\\CronScheduler.AspNetCore.csproj",
+      "startingProject": true,
+      "issues": 1,
+      "storyPoints": 0,
+      "properties": {
+        "appName": "CronScheduler.AspNetCore",
+        "projectKind": "ClassLibrary",
+        "frameworks": [
+          "net10.0",
+          "net8.0",
+          "netstandard2.0"
+        ],
+        "languages": [
+          "C#"
+        ],
+        "tools": [
+          "MSBuild"
+        ],
+        "isSdkStyle": true,
+        "isTestProject": false,
+        "numberOfFiles": 1,
+        "numberOfCodeFiles": 1,
+        "linesTotal": 26,
+        "linesOfCode": 26,
+        "totalApiScanned": 0,
+        "minLinesOfCodeToChange": 0,
+        "maxLinesOfCodeToChange": 0
+      },
+      "ruleInstances": [
+        {
+          "incidentId": "53054c64-2e5f-464e-95d3-2f82af2d9726",
+          "ruleId": "Pkg.0001",
+          "description": "Project references \u0027Microsoft.AspNetCore.Hosting.Abstractions\u0027 2.3.13 (included in this upgrade).",
+          "projectPath": "src\\CronScheduler.AspNetCore\\CronScheduler.AspNetCore.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Microsoft.AspNetCore.Hosting.Abstractions, 2.3.13",
+              "protected": "Microsoft.AspNetCore.Hosting.Abstractions, 2.3.13"
+            },
+            "kind": "File",
+            "path": "src\\CronScheduler.AspNetCore\\CronScheduler.AspNetCore.csproj",
+            "snippet": "Microsoft.AspNetCore.Hosting.Abstractions, 2.3.13",
+            "protectedSnippet": "Microsoft.AspNetCore.Hosting.Abstractions, 2.3.13",
+            "label": "Microsoft.AspNetCore.Hosting.Abstractions 2.3.13",
+            "properties": {
+              "PackageId": "Microsoft.AspNetCore.Hosting.Abstractions",
+              "PackageVersion": "2.3.13",
+              "PackageNewVersion": "2.3.13",
+              "PackageReplacements": null
+            }
+          }
+        },
+        {
+          "incidentId": "1f2146a4-792b-47a6-b599-e5e978c82ff0",
+          "ruleId": "Pkg.0001",
+          "description": "Project references \u0027Microsoft.SourceLink.GitHub\u0027 1.1.1; proposed upgrade to 10.0.401.",
+          "projectPath": "src\\CronScheduler.AspNetCore\\CronScheduler.AspNetCore.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Microsoft.SourceLink.GitHub, 1.1.1",
+              "protected": "Microsoft.SourceLink.GitHub, 1.1.1"
+            },
+            "kind": "File",
+            "path": "src\\CronScheduler.AspNetCore\\CronScheduler.AspNetCore.csproj",
+            "snippet": "Microsoft.SourceLink.GitHub, 1.1.1",
+            "protectedSnippet": "Microsoft.SourceLink.GitHub, 1.1.1",
+            "label": "Microsoft.SourceLink.GitHub 1.1.1",
+            "properties": {
+              "PackageId": "Microsoft.SourceLink.GitHub",
+              "PackageVersion": "1.1.1",
+              "PackageNewVersion": "10.0.401",
+              "PackageReplacements": null
+            }
+          }
+        }
+      ],
+      "features": []
+    },
+    {
+      "path": "src\\CronScheduler.Extensions\\CronScheduler.Extensions.csproj",
+      "startingProject": true,
+      "issues": 1,
+      "storyPoints": 0,
+      "properties": {
+        "appName": "CronScheduler.Extensions",
+        "projectKind": "ClassLibrary",
+        "frameworks": [
+          "net10.0",
+          "net8.0",
+          "netstandard2.0"
+        ],
+        "languages": [
+          "C#"
+        ],
+        "tools": [
+          "MSBuild"
+        ],
+        "isSdkStyle": true,
+        "isTestProject": false,
+        "numberOfFiles": 20,
+        "numberOfCodeFiles": 20,
+        "linesTotal": 1226,
+        "linesOfCode": 1226,
+        "totalApiScanned": 0,
+        "minLinesOfCodeToChange": 0,
+        "maxLinesOfCodeToChange": 0
+      },
+      "ruleInstances": [
+        {
+          "incidentId": "125f4180-65b3-408d-9107-7d76b784a463",
+          "ruleId": "Pkg.0001",
+          "description": "Project references \u0027Bet.Extensions.Options\u0027 4.0.1 (included in this upgrade).",
+          "projectPath": "src\\CronScheduler.Extensions\\CronScheduler.Extensions.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Bet.Extensions.Options, 4.0.1",
+              "protected": "Bet.Extensions.Options, 4.0.1"
+            },
+            "kind": "File",
+            "path": "src\\CronScheduler.Extensions\\CronScheduler.Extensions.csproj",
+            "snippet": "Bet.Extensions.Options, 4.0.1",
+            "protectedSnippet": "Bet.Extensions.Options, 4.0.1",
+            "label": "Bet.Extensions.Options 4.0.1",
+            "properties": {
+              "PackageId": "Bet.Extensions.Options",
+              "PackageVersion": "4.0.1",
+              "PackageNewVersion": "4.0.1",
+              "PackageReplacements": null
+            }
+          }
+        },
+        {
+          "incidentId": "d7749b53-8b56-4133-81fa-28a4723bc66f",
+          "ruleId": "Pkg.0001",
+          "description": "Project references \u0027Cronos\u0027 0.13.0 (included in this upgrade).",
+          "projectPath": "src\\CronScheduler.Extensions\\CronScheduler.Extensions.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Cronos, 0.13.0",
+              "protected": "Cronos, 0.13.0"
+            },
+            "kind": "File",
+            "path": "src\\CronScheduler.Extensions\\CronScheduler.Extensions.csproj",
+            "snippet": "Cronos, 0.13.0",
+            "protectedSnippet": "Cronos, 0.13.0",
+            "label": "Cronos 0.13.0",
+            "properties": {
+              "PackageId": "Cronos",
+              "PackageVersion": "0.13.0",
+              "PackageNewVersion": "0.13.0",
+              "PackageReplacements": null
+            }
+          }
+        },
+        {
+          "incidentId": "0e8fc75d-d328-4233-966f-839f23b3eb40",
+          "ruleId": "Pkg.0001",
+          "description": "Project references \u0027Microsoft.Extensions.DependencyInjection\u0027 8.0.1; proposed upgrade to 10.0.12.",
+          "projectPath": "src\\CronScheduler.Extensions\\CronScheduler.Extensions.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Microsoft.Extensions.DependencyInjection, 8.0.1",
+              "protected": "Microsoft.Extensions.DependencyInjection, 8.0.1"
+            },
+            "kind": "File",
+            "path": "src\\CronScheduler.Extensions\\CronScheduler.Extensions.csproj",
+            "snippet": "Microsoft.Extensions.DependencyInjection, 8.0.1",
+            "protectedSnippet": "Microsoft.Extensions.DependencyInjection, 8.0.1",
+            "label": "Microsoft.Extensions.DependencyInjection 8.0.1",
+            "properties": {
+              "PackageId": "Microsoft.Extensions.DependencyInjection",
+              "PackageVersion": "8.0.1",
+              "PackageNewVersion": "10.0.12",
+              "PackageReplacements": null
+            }
+          }
+        },
+        {
+          "incidentId": "b988b463-341c-4fdd-87a9-f3f9c7455cf7",
+          "ruleId": "Pkg.0001",
+          "description": "Project references \u0027Microsoft.Extensions.Hosting.Abstractions\u0027 8.0.1; proposed upgrade to 10.0.12.",
+          "projectPath": "src\\CronScheduler.Extensions\\CronScheduler.Extensions.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Microsoft.Extensions.Hosting.Abstractions, 8.0.1",
+              "protected": "Microsoft.Extensions.Hosting.Abstractions, 8.0.1"
+            },
+            "kind": "File",
+            "path": "src\\CronScheduler.Extensions\\CronScheduler.Extensions.csproj",
+            "snippet": "Microsoft.Extensions.Hosting.Abstractions, 8.0.1",
+            "protectedSnippet": "Microsoft.Extensions.Hosting.Abstractions, 8.0.1",
+            "label": "Microsoft.Extensions.Hosting.Abstractions 8.0.1",
+            "properties": {
+              "PackageId": "Microsoft.Extensions.Hosting.Abstractions",
+              "PackageVersion": "8.0.1",
+              "PackageNewVersion": "10.0.12",
+              "PackageReplacements": null
+            }
+          }
+        },
+        {
+          "incidentId": "1ba81965-57b1-45b6-a253-9267b5fa5a59",
+          "ruleId": "Pkg.0001",
+          "description": "Project references \u0027Microsoft.Extensions.Logging.Abstractions\u0027 8.0.3; proposed upgrade to 10.0.12.",
+          "projectPath": "src\\CronScheduler.Extensions\\CronScheduler.Extensions.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Microsoft.Extensions.Logging.Abstractions, 8.0.3",
+              "protected": "Microsoft.Extensions.Logging.Abstractions, 8.0.3"
+            },
+            "kind": "File",
+            "path": "src\\CronScheduler.Extensions\\CronScheduler.Extensions.csproj",
+            "snippet": "Microsoft.Extensions.Logging.Abstractions, 8.0.3",
+            "protectedSnippet": "Microsoft.Extensions.Logging.Abstractions, 8.0.3",
+            "label": "Microsoft.Extensions.Logging.Abstractions 8.0.3",
+            "properties": {
+              "PackageId": "Microsoft.Extensions.Logging.Abstractions",
+              "PackageVersion": "8.0.3",
+              "PackageNewVersion": "10.0.12",
+              "PackageReplacements": null
+            }
+          }
+        },
+        {
+          "incidentId": "be0bf6b3-1b28-4a3a-9e05-4588bdb9d369",
+          "ruleId": "Pkg.0001",
+          "description": "Project references \u0027Microsoft.Extensions.Options.ConfigurationExtensions\u0027 8.0.0; proposed upgrade to 10.0.12.",
+          "projectPath": "src\\CronScheduler.Extensions\\CronScheduler.Extensions.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Microsoft.Extensions.Options.ConfigurationExtensions, 8.0.0",
+              "protected": "Microsoft.Extensions.Options.ConfigurationExtensions, 8.0.0"
+            },
+            "kind": "File",
+            "path": "src\\CronScheduler.Extensions\\CronScheduler.Extensions.csproj",
+            "snippet": "Microsoft.Extensions.Options.ConfigurationExtensions, 8.0.0",
+            "protectedSnippet": "Microsoft.Extensions.Options.ConfigurationExtensions, 8.0.0",
+            "label": "Microsoft.Extensions.Options.ConfigurationExtensions 8.0.0",
+            "properties": {
+              "PackageId": "Microsoft.Extensions.Options.ConfigurationExtensions",
+              "PackageVersion": "8.0.0",
+              "PackageNewVersion": "10.0.12",
+              "PackageReplacements": null
+            }
+          }
+        },
+        {
+          "incidentId": "3ff60f19-5cc8-46b6-92d7-39a11ed96d67",
+          "ruleId": "Pkg.0001",
+          "description": "Project references \u0027Microsoft.SourceLink.GitHub\u0027 1.1.1; proposed upgrade to 10.0.401.",
+          "projectPath": "src\\CronScheduler.Extensions\\CronScheduler.Extensions.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Microsoft.SourceLink.GitHub, 1.1.1",
+              "protected": "Microsoft.SourceLink.GitHub, 1.1.1"
+            },
+            "kind": "File",
+            "path": "src\\CronScheduler.Extensions\\CronScheduler.Extensions.csproj",
+            "snippet": "Microsoft.SourceLink.GitHub, 1.1.1",
+            "protectedSnippet": "Microsoft.SourceLink.GitHub, 1.1.1",
+            "label": "Microsoft.SourceLink.GitHub 1.1.1",
+            "properties": {
+              "PackageId": "Microsoft.SourceLink.GitHub",
+              "PackageVersion": "1.1.1",
+              "PackageNewVersion": "10.0.401",
+              "PackageReplacements": null
+            }
+          }
+        }
+      ],
+      "features": []
+    },
+    {
+      "path": "test\\CronScheduler.UnitTest\\CronScheduler.UnitTest.csproj",
+      "startingProject": true,
+      "issues": 1,
+      "storyPoints": 0,
+      "properties": {
+        "appName": "CronScheduler.UnitTest",
+        "projectKind": "DotNetCoreApp",
+        "frameworks": [
+          "net10.0"
+        ],
+        "languages": [
+          "C#"
+        ],
+        "tools": [
+          "MSBuild"
+        ],
+        "isSdkStyle": true,
+        "isTestProject": true,
+        "numberOfFiles": 15,
+        "numberOfCodeFiles": 12,
+        "linesTotal": 3561,
+        "linesOfCode": 898,
+        "totalApiScanned": 0,
+        "minLinesOfCodeToChange": 0,
+        "maxLinesOfCodeToChange": 0
+      },
+      "ruleInstances": [
+        {
+          "incidentId": "33995691-a276-4b75-9f0d-01b4300fe8ef",
+          "ruleId": "Pkg.0001",
+          "description": "Project references \u0027Microsoft.AspNetCore.TestHost\u0027 10.0.11; proposed upgrade to 10.0.12.",
+          "projectPath": "test\\CronScheduler.UnitTest\\CronScheduler.UnitTest.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Microsoft.AspNetCore.TestHost, 10.0.11",
+              "protected": "Microsoft.AspNetCore.TestHost, 10.0.11"
+            },
+            "kind": "File",
+            "path": "test\\CronScheduler.UnitTest\\CronScheduler.UnitTest.csproj",
+            "snippet": "Microsoft.AspNetCore.TestHost, 10.0.11",
+            "protectedSnippet": "Microsoft.AspNetCore.TestHost, 10.0.11",
+            "label": "Microsoft.AspNetCore.TestHost 10.0.11",
+            "properties": {
+              "PackageId": "Microsoft.AspNetCore.TestHost",
+              "PackageVersion": "10.0.11",
+              "PackageNewVersion": "10.0.12",
+              "PackageReplacements": null
+            }
+          }
+        },
+        {
+          "incidentId": "d085d4a8-47c5-4afd-9df1-3b84a816507b",
+          "ruleId": "Pkg.0001",
+          "description": "Project references \u0027Microsoft.NET.Test.Sdk\u0027 18.9.0; proposed upgrade to 18.10.1.",
+          "projectPath": "test\\CronScheduler.UnitTest\\CronScheduler.UnitTest.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Microsoft.NET.Test.Sdk, 18.9.0",
+              "protected": "Microsoft.NET.Test.Sdk, 18.9.0"
+            },
+            "kind": "File",
+            "path": "test\\CronScheduler.UnitTest\\CronScheduler.UnitTest.csproj",
+            "snippet": "Microsoft.NET.Test.Sdk, 18.9.0",
+            "protectedSnippet": "Microsoft.NET.Test.Sdk, 18.9.0",
+            "label": "Microsoft.NET.Test.Sdk 18.9.0",
+            "properties": {
+              "PackageId": "Microsoft.NET.Test.Sdk",
+              "PackageVersion": "18.9.0",
+              "PackageNewVersion": "18.10.1",
+              "PackageReplacements": null
+            }
+          }
+        },
+        {
+          "incidentId": "dac00c15-bb40-4165-9bc1-da12c4dc32ea",
+          "ruleId": "Pkg.0001",
+          "description": "Project references \u0027Microsoft.SourceLink.GitHub\u0027 1.1.1; proposed upgrade to 10.0.401.",
+          "projectPath": "test\\CronScheduler.UnitTest\\CronScheduler.UnitTest.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Microsoft.SourceLink.GitHub, 1.1.1",
+              "protected": "Microsoft.SourceLink.GitHub, 1.1.1"
+            },
+            "kind": "File",
+            "path": "test\\CronScheduler.UnitTest\\CronScheduler.UnitTest.csproj",
+            "snippet": "Microsoft.SourceLink.GitHub, 1.1.1",
+            "protectedSnippet": "Microsoft.SourceLink.GitHub, 1.1.1",
+            "label": "Microsoft.SourceLink.GitHub 1.1.1",
+            "properties": {
+              "PackageId": "Microsoft.SourceLink.GitHub",
+              "PackageVersion": "1.1.1",
+              "PackageNewVersion": "10.0.401",
+              "PackageReplacements": null
+            }
+          }
+        },
+        {
+          "incidentId": "7a1c30eb-490e-472a-8c73-34f2ae45f6c6",
+          "ruleId": "Pkg.0001",
+          "description": "Project references \u0027Moq\u0027 4.20.72 (included in this upgrade).",
+          "projectPath": "test\\CronScheduler.UnitTest\\CronScheduler.UnitTest.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Moq, 4.20.72",
+              "protected": "Moq, 4.20.72"
+            },
+            "kind": "File",
+            "path": "test\\CronScheduler.UnitTest\\CronScheduler.UnitTest.csproj",
+            "snippet": "Moq, 4.20.72",
+            "protectedSnippet": "Moq, 4.20.72",
+            "label": "Moq 4.20.72",
+            "properties": {
+              "PackageId": "Moq",
+              "PackageVersion": "4.20.72",
+              "PackageNewVersion": "4.20.72",
+              "PackageReplacements": null
+            }
+          }
+        },
+        {
+          "incidentId": "769741fc-4f29-4d38-9802-b019c64acf45",
+          "ruleId": "Pkg.0001",
+          "description": "Project references \u0027xunit.runner.visualstudio\u0027 4.0.0 (included in this upgrade).",
+          "projectPath": "test\\CronScheduler.UnitTest\\CronScheduler.UnitTest.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "xunit.runner.visualstudio, 4.0.0",
+              "protected": "xunit.runner.visualstudio, 4.0.0"
+            },
+            "kind": "File",
+            "path": "test\\CronScheduler.UnitTest\\CronScheduler.UnitTest.csproj",
+            "snippet": "xunit.runner.visualstudio, 4.0.0",
+            "protectedSnippet": "xunit.runner.visualstudio, 4.0.0",
+            "label": "xunit.runner.visualstudio 4.0.0",
+            "properties": {
+              "PackageId": "xunit.runner.visualstudio",
+              "PackageVersion": "4.0.0",
+              "PackageNewVersion": "4.0.0",
+              "PackageReplacements": null
+            }
+          }
+        },
+        {
+          "incidentId": "4fb66de9-abb3-4cca-82a8-480fb9ae2053",
+          "ruleId": "Pkg.0001",
+          "description": "Project references \u0027xunit.v3\u0027 4.0.0; proposed upgrade to 4.0.1.",
+          "projectPath": "test\\CronScheduler.UnitTest\\CronScheduler.UnitTest.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "xunit.v3, 4.0.0",
+              "protected": "xunit.v3, 4.0.0"
+            },
+            "kind": "File",
+            "path": "test\\CronScheduler.UnitTest\\CronScheduler.UnitTest.csproj",
+            "snippet": "xunit.v3, 4.0.0",
+            "protectedSnippet": "xunit.v3, 4.0.0",
+            "label": "xunit.v3 4.0.0",
+            "properties": {
+              "PackageId": "xunit.v3",
+              "PackageVersion": "4.0.0",
+              "PackageNewVersion": "4.0.1",
+              "PackageReplacements": null
+            }
+          }
+        }
+      ],
+      "features": []
+    },
+    {
+      "path": "src\\CronSchedulerApp\\CronSchedulerApp.csproj",
+      "startingProject": true,
+      "issues": 1,
+      "storyPoints": 0,
+      "properties": {
+        "appName": "CronSchedulerApp",
+        "projectKind": "AspNetCore",
+        "frameworks": [
+          "net10.0"
+        ],
+        "languages": [
+          "C#"
+        ],
+        "tools": [
+          "MSBuild"
+        ],
+        "isSdkStyle": true,
+        "isTestProject": false,
+        "numberOfFiles": 39,
+        "numberOfCodeFiles": 30,
+        "linesTotal": 1678,
+        "linesOfCode": 1586,
+        "totalApiScanned": 0,
+        "minLinesOfCodeToChange": 0,
+        "maxLinesOfCodeToChange": 0
+      },
+      "ruleInstances": [
+        {
+          "incidentId": "d80584ab-80b7-497b-87fd-24f26efd5b05",
+          "ruleId": "Pkg.0001",
+          "description": "Project references \u0027Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore\u0027 10.0.11; proposed upgrade to 10.0.12.",
+          "projectPath": "src\\CronSchedulerApp\\CronSchedulerApp.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore, 10.0.11",
+              "protected": "Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore, 10.0.11"
+            },
+            "kind": "File",
+            "path": "src\\CronSchedulerApp\\CronSchedulerApp.csproj",
+            "snippet": "Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore, 10.0.11",
+            "protectedSnippet": "Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore, 10.0.11",
+            "label": "Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore 10.0.11",
+            "properties": {
+              "PackageId": "Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore",
+              "PackageVersion": "10.0.11",
+              "PackageNewVersion": "10.0.12",
+              "PackageReplacements": null
+            }
+          }
+        },
+        {
+          "incidentId": "451ec5f1-5e73-4686-b9f0-66b7826b417c",
+          "ruleId": "Pkg.0001",
+          "description": "Project references \u0027Microsoft.AspNetCore.Identity.EntityFrameworkCore\u0027 10.0.11; proposed upgrade to 10.0.12.",
+          "projectPath": "src\\CronSchedulerApp\\CronSchedulerApp.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Microsoft.AspNetCore.Identity.EntityFrameworkCore, 10.0.11",
+              "protected": "Microsoft.AspNetCore.Identity.EntityFrameworkCore, 10.0.11"
+            },
+            "kind": "File",
+            "path": "src\\CronSchedulerApp\\CronSchedulerApp.csproj",
+            "snippet": "Microsoft.AspNetCore.Identity.EntityFrameworkCore, 10.0.11",
+            "protectedSnippet": "Microsoft.AspNetCore.Identity.EntityFrameworkCore, 10.0.11",
+            "label": "Microsoft.AspNetCore.Identity.EntityFrameworkCore 10.0.11",
+            "properties": {
+              "PackageId": "Microsoft.AspNetCore.Identity.EntityFrameworkCore",
+              "PackageVersion": "10.0.11",
+              "PackageNewVersion": "10.0.12",
+              "PackageReplacements": null
+            }
+          }
+        },
+        {
+          "incidentId": "f2cc9b59-4ba1-4d58-9268-eddb5f5f4c75",
+          "ruleId": "Pkg.0001",
+          "description": "Project references \u0027Microsoft.AspNetCore.Identity.UI\u0027 10.0.11; proposed upgrade to 10.0.12.",
+          "projectPath": "src\\CronSchedulerApp\\CronSchedulerApp.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Microsoft.AspNetCore.Identity.UI, 10.0.11",
+              "protected": "Microsoft.AspNetCore.Identity.UI, 10.0.11"
+            },
+            "kind": "File",
+            "path": "src\\CronSchedulerApp\\CronSchedulerApp.csproj",
+            "snippet": "Microsoft.AspNetCore.Identity.UI, 10.0.11",
+            "protectedSnippet": "Microsoft.AspNetCore.Identity.UI, 10.0.11",
+            "label": "Microsoft.AspNetCore.Identity.UI 10.0.11",
+            "properties": {
+              "PackageId": "Microsoft.AspNetCore.Identity.UI",
+              "PackageVersion": "10.0.11",
+              "PackageNewVersion": "10.0.12",
+              "PackageReplacements": null
+            }
+          }
+        },
+        {
+          "incidentId": "d7b0eb0d-cf31-447a-8913-56fc1815f4c4",
+          "ruleId": "Pkg.0001",
+          "description": "Project references \u0027Microsoft.AspNetCore.Mvc.NewtonsoftJson\u0027 10.0.11; proposed upgrade to 10.0.12.",
+          "projectPath": "src\\CronSchedulerApp\\CronSchedulerApp.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Microsoft.AspNetCore.Mvc.NewtonsoftJson, 10.0.11",
+              "protected": "Microsoft.AspNetCore.Mvc.NewtonsoftJson, 10.0.11"
+            },
+            "kind": "File",
+            "path": "src\\CronSchedulerApp\\CronSchedulerApp.csproj",
+            "snippet": "Microsoft.AspNetCore.Mvc.NewtonsoftJson, 10.0.11",
+            "protectedSnippet": "Microsoft.AspNetCore.Mvc.NewtonsoftJson, 10.0.11",
+            "label": "Microsoft.AspNetCore.Mvc.NewtonsoftJson 10.0.11",
+            "properties": {
+              "PackageId": "Microsoft.AspNetCore.Mvc.NewtonsoftJson",
+              "PackageVersion": "10.0.11",
+              "PackageNewVersion": "10.0.12",
+              "PackageReplacements": null
+            }
+          }
+        },
+        {
+          "incidentId": "bd5ad2f5-477a-4895-9bbb-2baa40fff88f",
+          "ruleId": "Pkg.0001",
+          "description": "Project references \u0027Microsoft.EntityFrameworkCore.Relational\u0027 10.0.11; proposed upgrade to 10.0.12.",
+          "projectPath": "src\\CronSchedulerApp\\CronSchedulerApp.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Microsoft.EntityFrameworkCore.Relational, 10.0.11",
+              "protected": "Microsoft.EntityFrameworkCore.Relational, 10.0.11"
+            },
+            "kind": "File",
+            "path": "src\\CronSchedulerApp\\CronSchedulerApp.csproj",
+            "snippet": "Microsoft.EntityFrameworkCore.Relational, 10.0.11",
+            "protectedSnippet": "Microsoft.EntityFrameworkCore.Relational, 10.0.11",
+            "label": "Microsoft.EntityFrameworkCore.Relational 10.0.11",
+            "properties": {
+              "PackageId": "Microsoft.EntityFrameworkCore.Relational",
+              "PackageVersion": "10.0.11",
+              "PackageNewVersion": "10.0.12",
+              "PackageReplacements": null
+            }
+          }
+        },
+        {
+          "incidentId": "ff7a08c2-8acf-4c86-8d32-4432b908a2ee",
+          "ruleId": "Pkg.0001",
+          "description": "Project references \u0027Microsoft.EntityFrameworkCore.Sqlite\u0027 10.0.11; proposed upgrade to 10.0.12.",
+          "projectPath": "src\\CronSchedulerApp\\CronSchedulerApp.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Microsoft.EntityFrameworkCore.Sqlite, 10.0.11",
+              "protected": "Microsoft.EntityFrameworkCore.Sqlite, 10.0.11"
+            },
+            "kind": "File",
+            "path": "src\\CronSchedulerApp\\CronSchedulerApp.csproj",
+            "snippet": "Microsoft.EntityFrameworkCore.Sqlite, 10.0.11",
+            "protectedSnippet": "Microsoft.EntityFrameworkCore.Sqlite, 10.0.11",
+            "label": "Microsoft.EntityFrameworkCore.Sqlite 10.0.11",
+            "properties": {
+              "PackageId": "Microsoft.EntityFrameworkCore.Sqlite",
+              "PackageVersion": "10.0.11",
+              "PackageNewVersion": "10.0.12",
+              "PackageReplacements": null
+            }
+          }
+        },
+        {
+          "incidentId": "1f08de04-0dee-4768-8bea-89dbfdf2272b",
+          "ruleId": "Pkg.0001",
+          "description": "Project references \u0027Microsoft.EntityFrameworkCore.SqlServer\u0027 10.0.11; proposed upgrade to 10.0.12.",
+          "projectPath": "src\\CronSchedulerApp\\CronSchedulerApp.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Microsoft.EntityFrameworkCore.SqlServer, 10.0.11",
+              "protected": "Microsoft.EntityFrameworkCore.SqlServer, 10.0.11"
+            },
+            "kind": "File",
+            "path": "src\\CronSchedulerApp\\CronSchedulerApp.csproj",
+            "snippet": "Microsoft.EntityFrameworkCore.SqlServer, 10.0.11",
+            "protectedSnippet": "Microsoft.EntityFrameworkCore.SqlServer, 10.0.11",
+            "label": "Microsoft.EntityFrameworkCore.SqlServer 10.0.11",
+            "properties": {
+              "PackageId": "Microsoft.EntityFrameworkCore.SqlServer",
+              "PackageVersion": "10.0.11",
+              "PackageNewVersion": "10.0.12",
+              "PackageReplacements": null
+            }
+          }
+        },
+        {
+          "incidentId": "11159d75-770f-4c62-965d-b379002394fd",
+          "ruleId": "Pkg.0001",
+          "description": "Project references \u0027Microsoft.EntityFrameworkCore.Tools\u0027 10.0.11; proposed upgrade to 10.0.12.",
+          "projectPath": "src\\CronSchedulerApp\\CronSchedulerApp.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Microsoft.EntityFrameworkCore.Tools, 10.0.11",
+              "protected": "Microsoft.EntityFrameworkCore.Tools, 10.0.11"
+            },
+            "kind": "File",
+            "path": "src\\CronSchedulerApp\\CronSchedulerApp.csproj",
+            "snippet": "Microsoft.EntityFrameworkCore.Tools, 10.0.11",
+            "protectedSnippet": "Microsoft.EntityFrameworkCore.Tools, 10.0.11",
+            "label": "Microsoft.EntityFrameworkCore.Tools 10.0.11",
+            "properties": {
+              "PackageId": "Microsoft.EntityFrameworkCore.Tools",
+              "PackageVersion": "10.0.11",
+              "PackageNewVersion": "10.0.12",
+              "PackageReplacements": null
+            }
+          }
+        },
+        {
+          "incidentId": "251ddfba-b437-40e4-b6a9-8e8983e9c32e",
+          "ruleId": "Pkg.0001",
+          "description": "Project references \u0027Microsoft.Extensions.Http.Polly\u0027 10.0.11; proposed upgrade to 10.0.12.",
+          "projectPath": "src\\CronSchedulerApp\\CronSchedulerApp.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Microsoft.Extensions.Http.Polly, 10.0.11",
+              "protected": "Microsoft.Extensions.Http.Polly, 10.0.11"
+            },
+            "kind": "File",
+            "path": "src\\CronSchedulerApp\\CronSchedulerApp.csproj",
+            "snippet": "Microsoft.Extensions.Http.Polly, 10.0.11",
+            "protectedSnippet": "Microsoft.Extensions.Http.Polly, 10.0.11",
+            "label": "Microsoft.Extensions.Http.Polly 10.0.11",
+            "properties": {
+              "PackageId": "Microsoft.Extensions.Http.Polly",
+              "PackageVersion": "10.0.11",
+              "PackageNewVersion": "10.0.12",
+              "PackageReplacements": null
+            }
+          }
+        },
+        {
+          "incidentId": "cdb17f39-4a8b-4ee7-ac05-0ef0aa75b91a",
+          "ruleId": "Pkg.0001",
+          "description": "Project references \u0027Microsoft.SourceLink.GitHub\u0027 1.1.1; proposed upgrade to 10.0.401.",
+          "projectPath": "src\\CronSchedulerApp\\CronSchedulerApp.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Microsoft.SourceLink.GitHub, 1.1.1",
+              "protected": "Microsoft.SourceLink.GitHub, 1.1.1"
+            },
+            "kind": "File",
+            "path": "src\\CronSchedulerApp\\CronSchedulerApp.csproj",
+            "snippet": "Microsoft.SourceLink.GitHub, 1.1.1",
+            "protectedSnippet": "Microsoft.SourceLink.GitHub, 1.1.1",
+            "label": "Microsoft.SourceLink.GitHub 1.1.1",
+            "properties": {
+              "PackageId": "Microsoft.SourceLink.GitHub",
+              "PackageVersion": "1.1.1",
+              "PackageNewVersion": "10.0.401",
+              "PackageReplacements": null
+            }
+          }
+        }
+      ],
+      "features": []
+    },
+    {
+      "path": "src\\CronSchedulerWorker\\CronSchedulerWorker.csproj",
+      "startingProject": true,
+      "issues": 1,
+      "storyPoints": 0,
+      "properties": {
+        "appName": "CronSchedulerWorker",
+        "projectKind": "DotNetCoreApp",
+        "frameworks": [
+          "net10.0"
+        ],
+        "languages": [
+          "C#"
+        ],
+        "tools": [
+          "MSBuild"
+        ],
+        "isSdkStyle": true,
+        "isTestProject": false,
+        "numberOfFiles": 5,
+        "numberOfCodeFiles": 4,
+        "linesTotal": 142,
+        "linesOfCode": 122,
+        "totalApiScanned": 0,
+        "minLinesOfCodeToChange": 0,
+        "maxLinesOfCodeToChange": 0
+      },
+      "ruleInstances": [
+        {
+          "incidentId": "29803716-b2c5-4123-91a0-4fc38b511800",
+          "ruleId": "Pkg.0001",
+          "description": "Project references \u0027Microsoft.Extensions.Hosting\u0027 10.0.11; proposed upgrade to 10.0.12.",
+          "projectPath": "src\\CronSchedulerWorker\\CronSchedulerWorker.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Microsoft.Extensions.Hosting, 10.0.11",
+              "protected": "Microsoft.Extensions.Hosting, 10.0.11"
+            },
+            "kind": "File",
+            "path": "src\\CronSchedulerWorker\\CronSchedulerWorker.csproj",
+            "snippet": "Microsoft.Extensions.Hosting, 10.0.11",
+            "protectedSnippet": "Microsoft.Extensions.Hosting, 10.0.11",
+            "label": "Microsoft.Extensions.Hosting 10.0.11",
+            "properties": {
+              "PackageId": "Microsoft.Extensions.Hosting",
+              "PackageVersion": "10.0.11",
+              "PackageNewVersion": "10.0.12",
+              "PackageReplacements": null
+            }
+          }
+        },
+        {
+          "incidentId": "fe7c9d1a-44b8-45d6-81cc-b93dbbc3c97b",
+          "ruleId": "Pkg.0001",
+          "description": "Project references \u0027Microsoft.SourceLink.GitHub\u0027 1.1.1; proposed upgrade to 10.0.401.",
+          "projectPath": "src\\CronSchedulerWorker\\CronSchedulerWorker.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Microsoft.SourceLink.GitHub, 1.1.1",
+              "protected": "Microsoft.SourceLink.GitHub, 1.1.1"
+            },
+            "kind": "File",
+            "path": "src\\CronSchedulerWorker\\CronSchedulerWorker.csproj",
+            "snippet": "Microsoft.SourceLink.GitHub, 1.1.1",
+            "protectedSnippet": "Microsoft.SourceLink.GitHub, 1.1.1",
+            "label": "Microsoft.SourceLink.GitHub 1.1.1",
+            "properties": {
+              "PackageId": "Microsoft.SourceLink.GitHub",
+              "PackageVersion": "1.1.1",
+              "PackageNewVersion": "10.0.401",
+              "PackageReplacements": null
+            }
+          }
+        }
+      ],
+      "features": []
+    }
+  ],
+  "rules": {
+    "Pkg.0001": {
+      "id": "Pkg.0001",
+      "isFeature": false,
+      "description": "Project references a package included in this upgrade.\n\nThe project references one of the packages being upgraded. This finding records the reference (current and proposed version) so the assessment lists every affected project even when no breaking API changes were detected.",
+      "label": "Project references an upgraded package",
+      "severity": "Information",
+      "effort": 0
+    }
+  }
+}
