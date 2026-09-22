@@ -1,9 +1,8 @@
 <Project>
 
 	<PropertyGroup>
-		<AspNetCoreVersion>10.0.11</AspNetCoreVersion>
-		<ExtensionsVersion>[8.*, )</ExtensionsVersion>
-		<ExtensionsVersion Condition="'$(TargetFramework)' == 'net10.0'">10.0.11</ExtensionsVersion>
+		<AspNetCoreVersion>10.0.12</AspNetCoreVersion>
+		<ExtensionsVersion>10.0.12</ExtensionsVersion>
 		<EFCommonVersion>$(AspNetCoreVersion)</EFCommonVersion>
 		<BetCommon>[4.*, )</BetCommon>
 	</PropertyGroup>
@@ -39,10 +38,10 @@
 	</ItemGroup>
 
 	<ItemGroup Label="Unit Tests">
-		<PackageReference Update="Microsoft.NET.Test.Sdk" Version="18.9.0" />
+		<PackageReference Update="Microsoft.NET.Test.Sdk" Version="18.10.1" />
 		<PackageReference Update="Microsoft.AspNetCore.TestHost" Version="$(AspNetCoreVersion)" />
 		<PackageReference Update="Moq" Version="4.*" />
-		<PackageReference Update="xunit.v3" Version="4.0.0" />
+		<PackageReference Update="xunit.v3" Version="4.0.1" />
 		<PackageReference Update="xunit.runner.visualstudio" Version="4.0.0" PrivateAssets="All" />
 	</ItemGroup>
 
@@ -51,7 +50,7 @@
 	</ItemGroup>
 
 	<ItemGroup Label="SourceLink">
-		<PackageReference Include="Microsoft.SourceLink.GitHub" Version="1.*" PrivateAssets="All" />
+		<PackageReference Include="Microsoft.SourceLink.GitHub" Version="10.0.401" PrivateAssets="All" />
 		<!-- <PackageReference Include="Bet.CodeAnalyzers" Version="1.0.12" PrivateAssets="All" /> -->
 	</ItemGroup>
 
