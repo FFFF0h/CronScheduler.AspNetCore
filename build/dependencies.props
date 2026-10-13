@@ -38,11 +38,11 @@
 	</ItemGroup>
 
 	<ItemGroup Label="Unit Tests">
-		<PackageReference Update="Microsoft.NET.Test.Sdk" Version="18.10.1" />
+		<PackageReference Update="Microsoft.NET.Test.Sdk" Version="18.11.0" />
 		<PackageReference Update="Microsoft.AspNetCore.TestHost" Version="$(AspNetCoreVersion)" />
 		<PackageReference Update="Moq" Version="4.*" />
-		<PackageReference Update="xunit.v3" Version="4.0.1" />
-		<PackageReference Update="xunit.runner.visualstudio" Version="4.0.0" PrivateAssets="All" />
+		<PackageReference Update="xunit.v3" Version="4.0.2" />
+		<PackageReference Update="xunit.runner.visualstudio" Version="4.0.1" PrivateAssets="All" />
 	</ItemGroup>
 
 	<ItemGroup Label="Bet">
