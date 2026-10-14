@@ -1,8 +1,8 @@
 <Project>
 
 	<PropertyGroup>
-		<AspNetCoreVersion>10.0.12</AspNetCoreVersion>
-		<ExtensionsVersion>10.0.12</ExtensionsVersion>
+		<AspNetCoreVersion>10.0.13</AspNetCoreVersion>
+		<ExtensionsVersion>10.0.13</ExtensionsVersion>
 		<EFCommonVersion>$(AspNetCoreVersion)</EFCommonVersion>
 		<BetCommon>[4.*, )</BetCommon>
 	</PropertyGroup>
@@ -31,6 +31,7 @@
 		<PackageReference Update="Microsoft.EntityFrameworkCore.Sqlite" Version="$(EFCommonVersion)" />
 		<PackageReference Update="Microsoft.EntityFrameworkCore.SqlServer" Version="$(EFCommonVersion)" />
 		<PackageReference Update="Microsoft.EntityFrameworkCore.Tools" Version="$(EFCommonVersion)"/>
+		<PackageReference Update="System.Security.Cryptography.Pkcs" Version="10.0.13" />
 	</ItemGroup>
 
 	<ItemGroup Label="Worker">
